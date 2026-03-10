@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India FTA Tracker</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #FF6B00;
+    --saffron-light: #FF8C3A;
+    --saffron-dim: rgba(255,107,0,0.12);
+    --green: #138808;
+    --green-light: #1aad0a;
+    --navy: #0A0E1A;
+    --navy-mid: #111827;
+    --navy-card: #161D2E;
+    --navy-border: #1E2A42;
+    --white: #F5F0E8;
+    --white-dim: rgba(245,240,232,0.6);
+    --white-faint: rgba(245,240,232,0.1);
+    --surplus: #22C55E;
+    --deficit: #EF4444;
+    --gold: #F59E0B;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: 'Instrument Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    position: relative;
+    padding: 3rem 4rem 2rem;
+    border-bottom: 1px solid var(--navy-border);
+    background: linear-gradient(180deg, rgba(255,107,0,0.06) 0%, transparent 100%);
+    overflow: hidden;
+  }
+  header::before {
+    content: 'भारत';
+    position: absolute;
+    right: 3rem; top: 50%;
+    transform: translateY(-50%);
+    font-size: 9rem;
+    font-family: 'DM Serif Display', serif;
+    color: rgba(255,107,0,0.04);
+    pointer-events: none;
+    line-height: 1;
+  }
+  .header-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--saffron);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.05;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  header h1 span { color: var(--saffron); font-style: italic; }
+  .header-sub {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--white-dim);
+    max-width: 520px;
+    line-height: 1.6;
+  }
+  .header-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .hstat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .hstat-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    color: var(--saffron);
+  }
+  .hstat-label {
+    font-size: 0.72rem;
+    color: var(--white-dim);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ─── LAYOUT ─── */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    min-height: calc(100vh - 180px);
+  }
+
+  /* ─── TIMELINE SIDEBAR ─── */
+  .sidebar {
+    border-right: 1px solid var(--navy-border);
+    padding: 2rem 0;
+    position: sticky;
+    top: 0;
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+    background: var(--navy-mid);
+  }
+  .sidebar::-webkit-scrollbar { width: 4px; }
+  .sidebar::-webkit-scrollbar-track { background: transparent; }
+  .sidebar::-webkit-scrollbar-thumb { background: var(--navy-border); border-radius: 2px; }
+
+  .sidebar-header {
+    padding: 0 1.5rem 1.25rem;
+    border-bottom: 1px solid var(--navy-border);
+    margin-bottom: 0.5rem;
+  }
+  .sidebar-header h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    color: var(--saffron);
+    text-transform: uppercase;
+  }
+
+  .timeline-line {
+    position: relative;
+  }
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 2.3rem;
+    top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, var(--saffron) 0%, var(--navy-border) 100%);
+    opacity: 0.3;
+  }
+
+  .fta-btn {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.85rem 1.5rem 0.85rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+  }
+  .fta-btn:hover { background: var(--white-faint); }
+  .fta-btn.active {
+    background: var(--saffron-dim);
+    border-right: 2px solid var(--saffron);
+  }
+
+  .fta-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--navy-border);
+    border: 2px solid var(--navy-border);
+    margin-top: 4px;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    position: relative;
+    z-index: 1;
+  }
+  .fta-btn.active .fta-dot,
+  .fta-btn:hover .fta-dot {
+    background: var(--saffron);
+    border-color: var(--saffron);
+    box-shadow: 0 0 8px var(--saffron);
+  }
+
+  .fta-btn-info { flex: 1; }
+  .fta-year {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--saffron);
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
+  }
+  .fta-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .fta-partner {
+    font-size: 0.74rem;
+    color: var(--white-dim);
+    margin-top: 2px;
+  }
+  .fta-status-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-top: 4px;
+    display: inline-block;
+    letter-spacing: 0.06em;
+  }
+  .badge-active { background: rgba(34,197,94,0.15); color: var(--surplus); border: 1px solid rgba(34,197,94,0.3); }
+  .badge-pending { background: rgba(245,158,11,0.15); color: var(--gold); border: 1px solid rgba(245,158,11,0.3); }
+  .badge-review { background: rgba(239,68,68,0.15); color: var(--deficit); border: 1px solid rgba(239,68,68,0.3); }
+
+  /* ─── DETAIL PANEL ─── */
+  .detail-panel {
+    padding: 2.5rem 3rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+  }
+  .detail-panel::-webkit-scrollbar { width: 4px; }
+  .detail-panel::-webkit-scrollbar-thumb { background: var(--navy-border); border-radius: 2px; }
+
+  .placeholder-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    gap: 1.5rem;
+    opacity: 0.4;
+    text-align: center;
+  }
+  .placeholder-state svg { width: 64px; height: 64px; color: var(--saffron); }
+  .placeholder-state p { font-family: 'DM Serif Display', serif; font-size: 1.5rem; }
+
+  /* ─── FTA DETAIL CONTENT ─── */
+  .fta-detail { display: none; animation: fadeSlide 0.35s ease; }
+  .fta-detail.visible { display: block; }
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .detail-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .detail-hero h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+    color: var(--white);
+  }
+  .detail-hero h2 em { color: var(--saffron); font-style: italic; }
+  .detail-hero-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.75rem; }
+  .meta-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    padding: 4px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--navy-border);
+    color: var(--white-dim);
+    letter-spacing: 0.06em;
+  }
+  .meta-pill.signed { border-color: var(--saffron); color: var(--saffron); }
+  .meta-pill.effect { border-color: var(--green); color: var(--green-light); }
+
+  .balance-badge {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .balance-badge.surplus { background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3); }
+  .balance-badge.deficit { background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); }
+  .balance-badge .bal-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .balance-badge.surplus .bal-label { color: var(--surplus); }
+  .balance-badge.deficit .bal-label { color: var(--deficit); }
+  .balance-badge .bal-value {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+  }
+  .balance-badge.surplus .bal-value { color: var(--surplus); }
+  .balance-badge.deficit .bal-value { color: var(--deficit); }
+  .balance-badge .bal-sub { font-size: 0.7rem; color: var(--white-dim); margin-top: 2px; }
+
+  /* ─── SUMMARY GRID ─── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .summary-card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+  .summary-card.full { grid-column: 1 / -1; }
+  .sc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--saffron);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .sc-value {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--white);
+  }
+  .sc-value strong { color: var(--saffron-light); }
+
+  .market-access-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .ma-stat {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  .ma-stat .mv {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: var(--saffron);
+  }
+  .ma-stat .ml {
+    font-size: 0.68rem;
+    color: var(--white-dim);
+    margin-top: 2px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.04em;
+  }
+
+  /* ─── SECTION TITLES ─── */
+  .section-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    color: var(--saffron);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--navy-border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-title::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, var(--navy-border) 0%, transparent 100%);
+  }
+
+  /* ─── CHARTS ─── */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .chart-card {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+  .chart-card.full { grid-column: 1 / -1; }
+  .chart-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.4rem;
+  }
+  .chart-subtitle {
+    font-size: 0.7rem;
+    color: var(--white-dim);
+    margin-bottom: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .chart-container { position: relative; height: 220px; }
+  .chart-container.tall { height: 260px; }
+
+  /* ─── UTILISATION RATE ─── */
+  .util-section {
+    background: var(--navy-card);
+    border: 1px solid var(--navy-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .util-rate-display {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .util-gauge {
+    position: relative;
+    width: 100px; height: 100px;
+    flex-shrink: 0;
+  }
+  .util-gauge svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+  .util-gauge-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .util-pct {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--saffron);
+  }
+  .util-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--white-dim);
+    letter-spacing: 0.1em;
+    margin-top: 2px;
+  }
+  .util-breakdown { flex: 1; min-width: 220px; }
+  .util-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--navy-border);
+    font-size: 0.8rem;
+  }
+  .util-row:last-child { border-bottom: none; }
+  .util-row-label { color: var(--white-dim); }
+  .util-row-val { font-weight: 600; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; }
+  .util-note {
+    font-size: 0.72rem;
+    color: var(--white-dim);
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: rgba(255,107,0,0.06);
+    border-radius: 6px;
+    border-left: 2px solid var(--saffron);
+    font-style: italic;
+  }
+
+  /* ─── TOP GOODS TABLE ─── */
+  .goods-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    margin-top: 0.75rem;
+  }
+  .goods-table th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    color: var(--saffron);
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--navy-border);
+  }
+  .goods-table td {
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid rgba(30,42,66,0.7);
+    color: var(--white);
+    vertical-align: middle;
+  }
+  .goods-table tr:last-child td { border-bottom: none; }
+  .goods-table tr:hover td { background: var(--white-faint); }
+  .tariff-change {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+  }
+  .tariff-before { color: var(--deficit); }
+  .tariff-arrow { color: var(--white-dim); }
+  .tariff-after { color: var(--surplus); }
+  .rank-num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--saffron-dim);
+    color: var(--saffron);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .sidebar { position: static; height: auto; max-height: 300px; }
+    .detail-panel { max-height: none; padding: 1.5rem; }
+    header { padding: 2rem 1.5rem; }
+    .chart-grid { grid-template-columns: 1fr; }
+    .summary-grid { grid-template-columns: 1fr; }
+  }
+
+  .ashoka-wheel {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: 50px; height: 50px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .data-note {
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--white-dim);
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px dashed var(--navy-border);
+    border-radius: 6px;
+    line-height: 1.7;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Ministry of Commerce & Industry · Government of India</div>
+  <h1>India <span>FTA</span> Tracker</h1>
+  <p class="header-sub">Comprehensive monitor of India's Free Trade Agreements — signed, in-force, and under negotiation since 1991</p>
+  <div class="header-stats">
+    <div class="hstat"><span class="hstat-val">14</span><span class="hstat-label">Active FTAs</span></div>
+    <div class="hstat"><span class="hstat-val">6</span><span class="hstat-label">Under Negotiation</span></div>
+    <div class="hstat"><span class="hstat-val">34yr</span><span class="hstat-label">Timeline (1991–2025)</span></div>
+    <div class="hstat"><span class="hstat-val">54+</span><span class="hstat-label">Partner Countries</span></div>
+  </div>
+</header>
+
+<div class="main-layout">
+  <!-- TIMELINE SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h2>Chronological Timeline</h2>
+    </div>
+    <div class="timeline-line" id="timeline"></div>
+  </aside>
+
+  <!-- DETAIL PANEL -->
+  <main class="detail-panel" id="detail-panel">
+    <div class="placeholder-state" id="placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
+      </svg>
+      <p>Select an FTA from the timeline</p>
+    </div>
+    <div id="fta-content"></div>
+  </main>
+</div>
+
+<svg class="ashoka-wheel" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="3"/>
+  <circle cx="50" cy="50" r="8" stroke="currentColor" stroke-width="3"/>
+  <line x1="50" y1="5" x2="50" y2="95" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="5" y1="50" x2="95" y2="50" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="18" y1="18" x2="82" y2="82" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="82" y1="18" x2="18" y2="82" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="5" y1="30" x2="95" y2="70" stroke="currentColor" stroke-width="1"/>
+  <line x1="95" y1="30" x2="5" y2="70" stroke="currentColor" stroke-width="1"/>
+  <line x1="30" y1="5" x2="70" y2="95" stroke="currentColor" stroke-width="1"/>
+  <line x1="70" y1="5" x2="30" y2="95" stroke="currentColor" stroke-width="1"/>
+</svg>
+
+<script src="fta-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
