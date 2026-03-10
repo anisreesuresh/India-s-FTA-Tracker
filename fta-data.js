@@ -608,7 +608,7 @@ const FTA_DATA = [
     status: "active",
     type: "CETA",
     balanceType: "surplus",
-    currentBalance: "+$5.1B",
+    currentBalance: "+$5.9B",
     balanceNote: "India surplus (2024)",
     signed: "Negotiations launched January 2022, signed in July 2025.  Pending ratification",
     effective: "TBD",
@@ -628,7 +628,8 @@ const FTA_DATA = [
     utilisationRate: null,
     utilImportsFTA: null,
     utilTotalEligible: null,
-    utilisationNote: "No utilisation data — agreement not yet in force. Projected utilisation rate of 65–70% within 3 years of implementation based on sector readiness assessments.",
+    utilisationNote: "CETA not yet in force — pending UK parliamentary ratification 
+(objection period expired March 2026). No utilisation data available.",
     exports: {
       1991: 1100, 1992: 1280, 1993: 1460, 1994: 1700, 1995: 2000,
       1996: 2350, 1997: 2700, 1998: 2400, 1999: 2650, 2000: 3100,
