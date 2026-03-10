@@ -649,7 +649,6 @@ const FTA_DATA = [
     }
   }
 
-];
 
   
   // ─── 13. India–UK FTA (Under Negotiation) ───
@@ -685,8 +684,7 @@ const FTA_DATA = [
     utilisationRate: null,
     utilImportsFTA: null,
     utilTotalEligible: null,
-    utilisationNote: "CETA not yet in force — pending UK parliamentary ratification 
-(objection period expired March 2026). No utilisation data available.",
+    utilisationNote: "CETA not yet in force — pending UK parliamentary ratification (objection period expired March 2026). No utilisation data available.",
     exports: {
       1991: 1100, 1992: 1280, 1993: 1460, 1994: 1700, 1995: 2000,
       1996: 2350, 1997: 2700, 1998: 2400, 1999: 2650, 2000: 3100,
@@ -746,9 +744,19 @@ const FTA_DATA = [
     1996: 185, 1997: 215, 1998: 190, 1999: 210, 2000: 255,
     2001: 290, 2002: 330, 2003: 400, 2004: 520, 2005: 700,
     2006: 950, 2007: 1250, 2008: 1650, 2009: 1400, 2010: 1950,
-    2011: 2700, 2012: 3300,
-
-      }
+    2011: 2700, 2012: 3300, 2013: 3800, 2014: 4300, 2015: 3900,
+    2016: 3600, 2017: 4200, 2018: 4900, 2019: 5300, 2020: 4500,
+    2021: 5500, 2022: 7100, 2023: 6800, 2024: 4060, 2025: 4200
+  },
+  imports: {
+    1991: 180, 1992: 210, 1993: 245, 1994: 295, 1995: 360,
+    1996: 440, 1997: 510, 1998: 450, 1999: 500, 2000: 610,
+    2001: 690, 2002: 790, 2003: 950, 2004: 1240, 2005: 1650,
+    2006: 2200, 2007: 2900, 2008: 3800, 2009: 3200, 2010: 4400,
+    2011: 5700, 2012: 6800, 2013: 7600, 2014: 8500, 2015: 7600,
+    2016: 7100, 2017: 8200, 2018: 9500, 2019: 10200, 2020: 8800,
+    2021: 10700, 2022: 13500, 2023: 13000, 2024: 6550, 2025: 6800
+  }
 },
 
 // ─── 15. India–New Zealand FTA (2025) ───
@@ -859,8 +867,7 @@ const FTA_DATA = [
   }
 },
 
-
-
+];
 
  
 
