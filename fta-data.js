@@ -86,9 +86,9 @@ const FTA_DATA = [
       { rank: 5, product: "Textiles & Yarn", value2024: 310, tariffBefore: "40%", tariffAfter: "0%", growth: "moderate" },
     ],
     utilisationRate: 8,
-    utilImportsFTA: 2584,
-    utilTotalEligible: 3800,
-    utilisationNote: "India's exporters barely use the FTA (around 5%), while Sri Lanka's exporters use it heavily (~60%+).",
+utilImportsFTA: 192,
+utilTotalEligible: 2400,
+utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA preferential provisions — Indian exporters are competitive enough to not need the FTA margin. In contrast, over 60% of Sri Lanka's exports to India use the FTA. India's low utilisation is driven by: strong MFN competitiveness of Indian goods, lack of MSME awareness of certificate of origin procedures, and Sri Lanka's negative list on textiles/garments limiting incentive to claim preferences. The FTA benefit flows predominantly to Sri Lanka, not India.",
     exports: {
       1991: 280, 1992: 310, 1993: 340, 1994: 390, 1995: 450,
       1996: 510, 1997: 580, 1998: 620, 1999: 680, 2000: 820,
