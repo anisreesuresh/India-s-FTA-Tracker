@@ -595,170 +595,7 @@ const FTA_DATA = [
     }
   },
 
-  // ─── 12. India–UK FTA (Under Negotiation) ───
-  {
-    id: "india-uk-fta",
-    year: 2022,
-    signedYear: "24 July 2025",
-    effectiveYear: "pending ratification",
-    name: "India–UK FTA",
-    fullName: "India–United Kingdom Free Trade Agreement",
-    partner: "United Kingdom",
-    partnerCountries: ["United Kingdom"],
-    status: "active",
-    type: "CETA",
-    balanceType: "surplus",
-    currentBalance: "+$5.9B",
-    balanceNote: "India surplus (2024)",
-    signed: "Negotiations launched January 2022, signed in July 2025.  Pending ratification",
-    effective: "TBD",
-    summary: "Negotiations launched in January 2022 following Brexit, with India and the UK aiming for a comprehensive FTA that covers goods, services, digital trade, and investments. As of 2025, 14 rounds of negotiations have been completed with significant sticking points remaining — including UK demands on Scotch whisky tariff reduction (currently 150%), Indian demands on services/Mode 4 visas, and GI recognition for Indian goods. The bilateral goods trade stands at $20B, with a services surplus also for India. A deal was close in late 2023 but postponed due to UK general elections. Negotiations resumed under the new Labour government.",
-    keyProvisions: "include Scotch whisky duties falling from 150% to 75% on day one, and to 40% over 10 years; zero duty on Indian textiles, leather, marine products, gems/jewellery; services liberalisation; social security exemption for Indian workers in the UK for 3 years",
-    tariffLines: "UK eliminates tariffs on 99% of Indian tariff lines (covering nearly 100% of trade value); India reduces tariffs on 90% of UK lines",
-    dutyFreeLines: "UK eliminates tariffs on 99% of Indian tariff lines (covering nearly 100% of trade value); India reduces tariffs on 90% of UK lines",
-    dutyFreePercent: "TBD",
-    coverageNote: "Not yet ratified; 14+ rounds completed as of 2025",
-    topExports: [
-      { rank: 1, product: "Pharmaceuticals", value2024: 2100, tariffBefore: "0%", tariffAfter: "0% (already)", growth: "high" },
-      { rank: 2, product: "Gems & Jewellery", value2024: 980, tariffBefore: "2.5%", tariffAfter: "0% (proposed)", growth: "moderate" },
-      { rank: 3, product: "Textiles & Garments", value2024: 860, tariffBefore: "12%", tariffAfter: "0% (proposed)", growth: "high" },
-      { rank: 4, product: "Engineering Goods", value2024: 740, tariffBefore: "4%", tariffAfter: "0% (proposed)", growth: "moderate" },
-      { rank: 5, product: "IT & Software Services", value2024: 4500, tariffBefore: "N/A", tariffAfter: "N/A (services)", growth: "high" },
-    ],
-    utilisationRate: null,
-    utilImportsFTA: null,
-    utilTotalEligible: null,
-    utilisationNote: "CETA not yet in force — pending UK parliamentary ratification 
-(objection period expired March 2026). No utilisation data available.",
-    exports: {
-      1991: 1100, 1992: 1280, 1993: 1460, 1994: 1700, 1995: 2000,
-      1996: 2350, 1997: 2700, 1998: 2400, 1999: 2650, 2000: 3100,
-      2001: 3480, 2002: 3950, 2003: 4700, 2004: 6000, 2005: 7800,
-      2006: 10200, 2007: 13400, 2008: 17200, 2009: 14600, 2010: 19500,
-      2011: 26000, 2012: 31000, 2013: 35500, 2014: 39800, 2015: 36500,
-      2016: 34200, 2017: 39500, 2018: 46000, 2019: 49500, 2020: 43000,
-      2021: 52500, 2022: 67000, 2023: 64500, 2024: 69500, 2025: 75000
-    },
-    imports: {
-      1991: 980, 1992: 1140, 1993: 1310, 1994: 1530, 1995: 1800,
-      1996: 2120, 1997: 2440, 1998: 2160, 1999: 2390, 2000: 2800,
-      2001: 3140, 2002: 3560, 2003: 4240, 2004: 5420, 2005: 7050,
-      2006: 9250, 2007: 12200, 2008: 15700, 2009: 13300, 2010: 17900,
-      2011: 23900, 2012: 28600, 2013: 32900, 2014: 37000, 2015: 34000,
-      2016: 32000, 2017: 37000, 2018: 43100, 2019: 46500, 2020: 40500,
-      2021: 49500, 2022: 63200, 2023: 61000, 2024: 64400, 2025: 70000
-    }
-  },
-
-  // ─── 13. India–Canada FTA (Under Negotiation) ───
-  {
-    id: "india-canada-fta",
-    year: 2023,
-    signedYear: null,
-    effectiveYear: null,
-    name: "India–Canada CETA",
-    fullName: "India–Canada Comprehensive Economic Trade Agreement",
-    partner: "Canada",
-    partnerCountries: ["Canada"],
-    status: "review",
-    type: "FTA (Suspended/Negotiations Paused)",
-    balanceType: "surplus",
-    currentBalance: "+$3.2B",
-    balanceNote: "India surplus (2024)",
-    signed: "Negotiations launched 2010; paused 2017; resumed 2022; suspended 2023",
-    effective: "TBD",
-    summary: "India–Canada CETA negotiations were launched in 2010, stalled in 2017, resumed in 2022, and then effectively suspended in late 2023 following a severe diplomatic fallout over the Hardeep Singh Nijjar assassination case. Canada accused Indian government agents of involvement; India rejected the allegations. As of 2025, negotiations remain paused. Bilateral trade stood at ~$10B in 2023. Canada is a major destination for Indian pharmaceuticals, textiles, and IT services. India imports pulses, potash, coal, and aircraft from Canada.",
-    keyProvisions: "Negotiations suspended; prior rounds covered: tariff elimination, services (especially IT and financial services), investment protection, government procurement, SPS measures, IPR",
-    tariffLines: null,
-    dutyFreeLines: null,
-    dutyFreePercent: "TBD — negotiations suspended",
-    coverageNote: "Geopolitical tensions halted progress; timeline for resumption unclear",
-    topExports: [
-      { rank: 1, product: "Pharmaceuticals", value2024: 980, tariffBefore: "0%", tariffAfter: "0% (already)", growth: "moderate" },
-      { rank: 2, product: "Gems & Jewellery", value2024: 580, tariffBefore: "5%", tariffAfter: "TBD", growth: "low" },
-      { rank: 3, product: "Textiles & Garments", value2024: 420, tariffBefore: "18%", tariffAfter: "TBD", growth: "low" },
-      { rank: 4, product: "IT Services", value2024: 2800, tariffBefore: "N/A", tariffAfter: "N/A (services)", growth: "high" },
-      { rank: 5, product: "Engineering Goods", value2024: 350, tariffBefore: "6%", tariffAfter: "TBD", growth: "low" },
-    ],
-    utilisationRate: null,
-    utilImportsFTA: null,
-    utilTotalEligible: null,
-    utilisationNote: "No FTA in force — utilisation data not applicable. Trade conducted under MFN terms.",
-    exports: {
-      1991: 180, 1992: 210, 1993: 245, 1994: 295, 1995: 360,
-      1996: 440, 1997: 510, 1998: 450, 1999: 500, 2000: 610,
-      2001: 690, 2002: 790, 2003: 950, 2004: 1240, 2005: 1650,
-      2006: 2200, 2007: 2900, 2008: 3800, 2009: 3200, 2010: 4400,
-      2011: 4900, 2012: 5600, 2013: 6200, 2014: 6900, 2015: 6300,
-      2016: 5900, 2017: 6800, 2018: 7900, 2019: 8600, 2020: 7500,
-      2021: 9200, 2022: 11800, 2023: 11400, 2024: 12100, 2025: 12800
-    },
-    imports: {
-      1991: 120, 1992: 140, 1993: 165, 1994: 200, 1995: 250,
-      1996: 310, 1997: 360, 1998: 320, 1999: 360, 2000: 440,
-      2001: 500, 2002: 570, 2003: 690, 2004: 900, 2005: 1200,
-      2006: 1620, 2007: 2150, 2008: 2830, 2009: 2400, 2010: 3300,
-      2011: 3700, 2012: 4300, 2013: 4800, 2014: 5400, 2015: 4900,
-      2016: 4600, 2017: 5300, 2018: 6200, 2019: 6800, 2020: 5900,
-      2021: 7300, 2022: 9400, 2023: 9100, 2024: 8900, 2025: 9200
-    }
-  },
-
-  // ─── 14. India–GCC FTA (Under Negotiation) ───
-  {
-    id: "india-gcc-fta",
-    year: 2024,
-    signedYear: null,
-    effectiveYear: null,
-    name: "India–GCC FTA",
-    fullName: "India–Gulf Cooperation Council Free Trade Agreement",
-    partner: "GCC Members",
-    partnerCountries: ["Saudi Arabia", "UAE", "Qatar", "Kuwait", "Bahrain", "Oman"],
-    status: "pending",
-    type: "FTA (Under Negotiation)",
-    balanceType: "deficit",
-    currentBalance: "-$45B",
-    balanceNote: "India deficit (mainly oil imports)",
-    signed: "Negotiations restarted 2022; 3 rounds completed as of 2025",
-    effective: "TBD — targeted 2025/26",
-    summary: "India–GCC FTA negotiations were first launched in 2006 but stalled for 15 years. They were relaunched in July 2022, building on the momentum of the India–UAE CEPA. Three rounds have been completed as of early 2025. The GCC is India's largest trading bloc — bilateral trade exceeds $180B — and the GCC states host over 8.5 million Indian diaspora. India imports oil, gas, and chemicals; exports engineering goods, food, pharmaceuticals, and textiles. The UAE CEPA serves as a template. Key sticking point is India's demand for services/labour mobility concessions.",
-    keyProvisions: "Under negotiation: tariff reduction on industrial and agricultural goods; India seeking zero duty on textiles, pharma, food; GCC seeking reduced tariffs on petrochemicals and metals; services and investment chapters; digital trade; India–GCC investment framework under discussion",
-    tariffLines: null,
-    dutyFreeLines: null,
-    dutyFreePercent: "TBD",
-    coverageNote: "3 rounds completed; UAE separately covered under CEPA (2022)",
-    topExports: [
-      { rank: 1, product: "Engineering Goods", value2024: 8200, tariffBefore: "5%", tariffAfter: "0% (proposed)", growth: "high" },
-      { rank: 2, product: "Gems & Jewellery", value2024: 6500, tariffBefore: "5%", tariffAfter: "0% (proposed)", growth: "high" },
-      { rank: 3, product: "Food & Agri Products", value2024: 4100, tariffBefore: "5–15%", tariffAfter: "0–5% (proposed)", growth: "moderate" },
-      { rank: 4, product: "Pharmaceuticals", value2024: 3200, tariffBefore: "5%", tariffAfter: "0% (proposed)", growth: "high" },
-      { rank: 5, product: "Textiles & Garments", value2024: 2800, tariffBefore: "5%", tariffAfter: "0% (proposed)", growth: "moderate" },
-    ],
-    utilisationRate: null,
-    utilImportsFTA: null,
-    utilTotalEligible: null,
-    utilisationNote: "Not yet in force. Projected high utilisation given large existing trade flows and diaspora network facilitating compliance.",
-    exports: {
-      1991: 900, 1992: 1050, 1993: 1220, 1994: 1440, 1995: 1720,
-      1996: 2060, 1997: 2380, 1998: 2110, 1999: 2340, 2000: 2810,
-      2001: 3170, 2002: 3620, 2003: 4350, 2004: 5650, 2005: 7500,
-      2006: 10000, 2007: 13300, 2008: 18000, 2009: 15300, 2010: 21000,
-      2011: 29000, 2012: 35200, 2013: 40000, 2014: 45000, 2015: 41200,
-      2016: 38700, 2017: 45000, 2018: 52500, 2019: 56800, 2020: 48500,
-      2021: 58000, 2022: 75000, 2023: 72000, 2024: 78000, 2025: 85000
-    },
-    imports: {
-      1991: 2200, 1992: 2550, 1993: 2960, 1994: 3490, 1995: 4180,
-      1996: 5010, 1997: 5780, 1998: 5110, 1999: 5680, 2000: 6820,
-      2001: 7700, 2002: 8800, 2003: 10600, 2004: 13800, 2005: 18500,
-      2006: 25000, 2007: 33500, 2008: 45500, 2009: 38500, 2010: 54000,
-      2011: 75500, 2012: 92000, 2013: 104500, 2014: 118000, 2015: 109000,
-      2016: 102500, 2017: 120000, 2018: 140000, 2019: 152000, 2020: 130000,
-      2021: 158000, 2022: 202000, 2023: 196000, 2024: 123000, 2025: 128000
-    }
-  },
-
-  // ─── 15. India–EFTA FTA (2024) ───
+ // ─── 12. India–EFTA FTA (2024) ───
   {
     id: "india-efta-fta",
     year: 2024,
@@ -813,3 +650,218 @@ const FTA_DATA = [
   }
 
 ];
+
+  
+  // ─── 13. India–UK FTA (Under Negotiation) ───
+  {
+    id: "india-uk-fta",
+    year: 2022,
+    signedYear: "24 July 2025",
+    effectiveYear: "pending ratification",
+    name: "India–UK FTA",
+    fullName: "India–United Kingdom Free Trade Agreement",
+    partner: "United Kingdom",
+    partnerCountries: ["United Kingdom"],
+    status: "active",
+    type: "CETA",
+    balanceType: "surplus",
+    currentBalance: "+$5.9B",
+    balanceNote: "India surplus (2024)",
+    signed: "Negotiations launched January 2022, signed in July 2025.  Pending ratification",
+    effective: "TBD",
+    summary: "Negotiations concluded 6 May 2025; signed 24 July 2025 by PM Modi and PM Starmer in London. India's most comprehensive agreement with a G7 economy, covering goods, services, digital trade, investment, and labour mobility. Bilateral trade currently at $56 billion with a target to double to $120 billion by 2030.",
+    keyProvisions: "UK eliminates duties on 99% of Indian tariff lines covering ~100% of trade value; India opens 89.5% of tariff lines covering 91% of UK exports; zero duty on Indian textiles (previously 12%), leather and footwear (previously up to 16%), marine products, gems & jewellery, pharma; Scotch whisky tariff halved from 150% to 75% immediately; Double Contribution Convention — Indian workers exempt from UK National Insurance for 3 years; services liberalisation across IT/ITeS, financial, professional services; 29-chapter agreement",
+    tariffLines: "UK eliminates tariffs on 99% of Indian tariff lines (covering nearly 100% of trade value); India reduces tariffs on 90% of UK lines",
+    dutyFreeLines: "UK eliminates tariffs on 99% of Indian tariff lines (covering nearly 100% of trade value); India reduces tariffs on 90% of UK lines",
+    dutyFreePercent: "TBD",
+    coverageNote: "Not yet ratified; 14+ rounds completed as of 2025",
+    topExports: [
+      { rank: 1, product: "Pharmaceuticals", value2024: 2100, tariffBefore: "0%", tariffAfter: "0% (already)", growth: "high" },
+      { rank: 2, product: "Gems & Jewellery", value2024: 980, tariffBefore: "2.5%", tariffAfter: "0% (proposed)", growth: "moderate" },
+      { rank: 3, product: "Textiles & Garments", value2024: 860, tariffBefore: "12%", tariffAfter: "0% (proposed)", growth: "high" },
+      { rank: 4, product: "Engineering Goods", value2024: 740, tariffBefore: "4%", tariffAfter: "0% (proposed)", growth: "moderate" },
+      { rank: 5, product: "IT & Software Services", value2024: 4500, tariffBefore: "N/A", tariffAfter: "N/A (services)", growth: "high" },
+    ],
+    utilisationRate: null,
+    utilImportsFTA: null,
+    utilTotalEligible: null,
+    utilisationNote: "CETA not yet in force — pending UK parliamentary ratification 
+(objection period expired March 2026). No utilisation data available.",
+    exports: {
+      1991: 1100, 1992: 1280, 1993: 1460, 1994: 1700, 1995: 2000,
+      1996: 2350, 1997: 2700, 1998: 2400, 1999: 2650, 2000: 3100,
+      2001: 3480, 2002: 3950, 2003: 4700, 2004: 6000, 2005: 7800,
+      2006: 10200, 2007: 13400, 2008: 17200, 2009: 14600, 2010: 19500,
+      2011: 26000, 2012: 31000, 2013: 35500, 2014: 39800, 2015: 36500,
+      2016: 34200, 2017: 39500, 2018: 46000, 2019: 49500, 2020: 43000,
+      2021: 52500, 2022: 67000, 2023: 64500, 2024: 69500, 2025: 75000
+    },
+    imports: {
+      1991: 980, 1992: 1140, 1993: 1310, 1994: 1530, 1995: 1800,
+      1996: 2120, 1997: 2440, 1998: 2160, 1999: 2390, 2000: 2800,
+      2001: 3140, 2002: 3560, 2003: 4240, 2004: 5420, 2005: 7050,
+      2006: 9250, 2007: 12200, 2008: 15700, 2009: 13300, 2010: 17900,
+      2011: 23900, 2012: 28600, 2013: 32900, 2014: 37000, 2015: 34000,
+      2016: 32000, 2017: 37000, 2018: 43100, 2019: 46500, 2020: 40500,
+      2021: 49500, 2022: 63200, 2023: 61000, 2024: 64400, 2025: 70000
+    }
+  },
+
+// ─── 14. India–Oman CEPA (2025) ───
+{
+  id: "india-oman-cepa",
+  year: 2025,
+  signedYear: "18 December 2025",
+  effectiveYear: "Pending entry into force",
+  name: "India–Oman CEPA",
+  fullName: "India–Oman Comprehensive Economic Partnership Agreement",
+  partner: "Oman",
+  partnerCountries: ["Oman"],
+  status: "pending",
+  type: "CEPA",
+  balanceType: "deficit",
+  currentBalance: "-$2.5B",
+  balanceNote: "India deficit (FY 2024-25: exports $4.06B, imports $6.55B)",
+  signed: "18 December 2025, Muscat. Signed by Commerce Minister Piyush Goyal and Oman's Minister Qais bin Mohammed Al Yousef, in the presence of PM Modi and Sultan Haitham bin Tarik.",
+  effective: "Pending entry into force",
+  summary: "Signed on 18 December 2025, the India–Oman CEPA is India's second agreement with a GCC country, following the UAE CEPA (2022). It is also Oman's first bilateral trade agreement since its deal with the United States in 2006. Bilateral trade stood at $10.61 billion in FY 2024–25. India exports petroleum products, engineering goods, basmati rice, pharmaceuticals, and aluminium oxide to Oman; imports are dominated by crude oil, LNG, urea, and petrochemicals. The CEPA secures near-universal duty-free access for Indian goods in Oman, with services commitments across 127 sub-sectors — the most ambitious Oman has ever offered. A landmark provision on Traditional Medicine (AYUSH) is included, the first of its kind in any trade agreement globally.",
+  keyProvisions: "Oman: zero-duty access on 98.08% of tariff lines, covering 99.38% of India's exports by value; immediate elimination on 97.96% of lines from Day 1; full tariff elimination for gems & jewellery, textiles, leather, footwear, engineering goods, pharma, medical devices, automobiles; India: tariff liberalisation on 77.79% of tariff lines (12,556 lines) covering 94.81% of imports from Oman; sensitive sectors (dairy, cereals, gold, silver, tea, coffee, rubber, tobacco) excluded or under TRQ; services liberalisation across 127 sub-sectors including IT, professional services, education, health, AYUSH; enhanced Mode 4 mobility for Indian professionals; fast-track pharma approvals; mutual recognition of Halal and organic (NPOP) certification; world's first Traditional Medicine chapter across all modes of supply",
+  tariffLines: 12556,
+  dutyFreeLines: 9777,
+  dutyFreePercent: "98.08% (Oman), 77.79% (India)",
+  coverageNote: "Signed December 2025; pending entry into force. Oman's first bilateral deal since 2006. Sensitive Indian sectors protected via exclusion list and TRQs.",
+  topExports: [
+    { rank: 1, product: "Petroleum Products", value2024: 1420, tariffBefore: "5%", tariffAfter: "0%", growth: "high" },
+    { rank: 2, product: "Engineering Goods", value2024: 876, tariffBefore: "5%", tariffAfter: "0%", growth: "high" },
+    { rank: 3, product: "Basmati Rice & Agri", value2024: 320, tariffBefore: "5%", tariffAfter: "0%", growth: "moderate" },
+    { rank: 4, product: "Pharmaceuticals", value2024: 280, tariffBefore: "5%", tariffAfter: "0%", growth: "high" },
+    { rank: 5, product: "Gems & Jewellery", value2024: 210, tariffBefore: "5%", tariffAfter: "0%", growth: "moderate" },
+  ],
+  utilisationRate: null,
+  utilImportsFTA: null,
+  utilTotalEligible: null,
+  utilisationNote: "CEPA signed December 2025 — not yet in force. No utilisation data available. Projected early utilisation to be high given Day 1 tariff elimination on 97.96% of Omani lines and strong existing trade relationships. Key utilisers expected to be engineering goods exporters (EEPC members) and pharma companies. Oman serves as a gateway to wider GCC and East African markets, which may further boost effective utilisation.",
+  exports: {
+    1991: 80, 1992: 95, 1993: 110, 1994: 130, 1995: 155,
+    1996: 185, 1997: 215, 1998: 190, 1999: 210, 2000: 255,
+    2001: 290, 2002: 330, 2003: 400, 2004: 520, 2005: 700,
+    2006: 950, 2007: 1250, 2008: 1650, 2009: 1400, 2010: 1950,
+    2011: 2700, 2012: 3300,
+
+      }
+},
+
+// ─── 15. India–New Zealand FTA (2025) ───
+{
+  id: "india-newzealand-fta",
+  year: 2025,
+  signedYear: null,
+  effectiveYear: "Pending — formal signing est. Q1 2026; entry into force TBD",
+  name: "India–New Zealand FTA",
+  fullName: "India–New Zealand Free Trade Agreement",
+  partner: "New Zealand",
+  partnerCountries: ["New Zealand"],
+  status: "pending",
+  type: "FTA (Negotiations Concluded — Legal Review Pending)",
+  balanceType: "surplus",
+  currentBalance: "+$128M",
+  balanceNote: "India surplus (FY 2024-25: exports $711M, imports ~$587M in goods)",
+  signed: "Negotiations concluded 22 December 2025. Formal signing expected Q1 2026 after legal verification of text. Entry into force requires parliamentary ratification in both countries.",
+  effective: "Pending formal signing and ratification",
+  summary: "The India–New Zealand FTA was concluded on 22 December 2025, becoming one of India's fastest-ever FTAs — negotiated in just 9 months across 5 formal rounds after launch on 16 March 2025 during a meeting between PM Modi and NZ PM Christopher Luxon. It is India's third trade deal concluded in 2025, after the UK CETA (July) and Oman CEPA (December). Bilateral goods trade stood at $1.3 billion in FY 2024–25 (up 49% year-on-year), with total goods and services trade at $2.4 billion. India maintains a trade surplus. New Zealand has pledged $20 billion in investment in India over 15 years, with a rebalancing clause if investment targets are not met. The deal is described as a 'people-first' FTA for its unprecedented mobility provisions for Indian professionals, students, and skilled workers.",
+  keyProvisions: "New Zealand: immediate zero duty on 100% of tariff lines (8,284 lines) from Entry into Force — including textiles/apparel, leather, engineering goods, automobiles, ceramics, carpets, and headgear that previously faced ~10% duties; India: duty concessions on ~70% of tariff lines covering ~95% of NZ exports by value on a phased basis; NZ gains market access for dairy, horticulture, wine, wool, and wood products; services: NZ offers most ambitious services commitments in any of its FTAs — India secured access across IT/ITeS, professional services, education, financial services, tourism, construction; mobility: 5,000-quota Temporary Employment Entry Visa for Indian professionals (IT, engineering, healthcare, AYUSH, yoga, chefs, music teachers) for up to 3 years; Working Holiday visa framework for Indian youth; post-study work pathways; customs: 48-hour release window commitment; Agri-Tech Action Plans for kiwifruit, apples, honey; GI framework update by NZ to grant India same rights as EU; $20B NZ investment pledge with rebalancing clause; Financial Services Annex (18 articles)",
+  tariffLines: 8284,
+  dutyFreeLines: 8284,
+  dutyFreePercent: "100% of NZ tariff lines (immediate); ~70% of India's tariff lines (~95% of NZ exports by value, phased)",
+  coverageNote: "Negotiations concluded December 2025; pending legal verification and formal signing (est. Q1 2026). NZ's most ambitious FTA in services. $20B NZ investment pledge. 48-hour customs release commitment.",
+  topExports: [
+    { rank: 1, product: "Textiles & Garments", value2024: 180, tariffBefore: "~10%", tariffAfter: "0%", growth: "high" },
+    { rank: 2, product: "Engineering Goods", value2024: 145, tariffBefore: "~5–10%", tariffAfter: "0%", growth: "high" },
+    { rank: 3, product: "Leather & Footwear", value2024: 85, tariffBefore: "~10%", tariffAfter: "0%", growth: "high" },
+    { rank: 4, product: "Marine Products", value2024: 72, tariffBefore: "~5%", tariffAfter: "0%", growth: "moderate" },
+    { rank: 5, product: "Pharmaceuticals", value2024: 68, tariffBefore: "0–5%", tariffAfter: "0%", growth: "high" },
+  ],
+  utilisationRate: null,
+  utilImportsFTA: null,
+  utilTotalEligible: null,
+  utilisationNote: "FTA not yet in force — pending formal signing and ratification. No utilisation data available. Projected utilisation to be high given NZ's Day 1 zero-duty offer on 100% of tariff lines — the most straightforward access India has secured in any FTA. Key early utilisers: textiles (Tirupur, Surat), leather (Agra, Chennai), engineering goods (EEPC members), marine products (MPEDA). Mobility provisions (5,000-quota employment visa) are a major non-tariff gain not captured in goods utilisation rates.",
+  exports: {
+    1991: 18, 1992: 22, 1993: 26, 1994: 32, 1995: 40,
+    1996: 50, 1997: 59, 1998: 52, 1999: 58, 2000: 72,
+    2001: 83, 2002: 96, 2003: 117, 2004: 155, 2005: 210,
+    2006: 285, 2007: 380, 2008: 505, 2009: 425, 2010: 595,
+    2011: 810, 2012: 975, 2013: 1100, 2014: 1240, 2015: 1130,
+    2016: 1060, 2017: 1230, 2018: 1440, 2019: 1560, 2020: 1360,
+    2021: 1650, 2022: 2120, 2023: 2050, 2024: 711, 2025: 780
+  },
+  imports: {
+    1991: 22, 1992: 26, 1993: 31, 1994: 38, 1995: 48,
+    1996: 59, 1997: 69, 1998: 61, 1999: 68, 2000: 84,
+    2001: 97, 2002: 112, 2003: 136, 2004: 180, 2005: 246,
+    2006: 335, 2007: 448, 2008: 597, 2009: 502, 2010: 705,
+    2011: 960, 2012: 1155, 2013: 1303, 2014: 1470, 2015: 1340,
+    2016: 1257, 2017: 1460, 2018: 1706, 2019: 1848, 2020: 1610,
+    2021: 1956, 2022: 2510, 2023: 2428, 2024: 587, 2025: 620
+  }
+},
+
+// ─── 16. India–EU FTA (2026) ───
+{
+  id: "india-eu-fta",
+  year: 2026,
+  signedYear: "27 January 2026",
+  effectiveYear: "Pending — est. early 2027 at earliest",
+  name: "India–EU FTA",
+  fullName: "India–European Union Free Trade Agreement",
+  partner: "European Union",
+  partnerCountries: ["Germany", "France", "Netherlands", "Belgium", "Italy", "Spain", "and 22 other EU member states"],
+  status: "pending",
+  type: "FTA (Negotiations Concluded — Ratification Pending)",
+  balanceType: "surplus",
+  currentBalance: "+$15.2B",
+  balanceNote: "India surplus (FY 2024-25: exports $75.85B, imports $60.68B)",
+  signed: "Negotiations concluded 27 January 2026 at India–EU Summit, New Delhi. Formal legal vetting and translation underway before official signing. Ratification requires EU Council approval, European Parliament consent, and India Union Cabinet approval.",
+  effective: "Formal signing expected mid-2026; entry into force est. early 2027 at earliest",
+  summary: "Negotiations for the India–EU FTA were concluded on 27 January 2026 at a summit at Hyderabad House, New Delhi, attended by PM Modi, European Commission President Ursula von der Leyen, and European Council President António Costa — who were also Republic Day chief guests. Described as the 'mother of all trade deals', it is the largest agreement ever concluded by either side. Negotiations originally started in 2007, were suspended in 2013, relaunched in June 2022, and concluded in January 2026. The EU is India's largest trading partner, with bilateral goods trade of $136.5 billion in FY 2024–25. India runs a goods trade surplus of $15.2 billion with the EU. The deal covers goods, services, investment, digital trade, sustainability, and IP. A separate Investment Protection Agreement and GI Agreement are being negotiated in parallel. The FTA is not yet in force — it must undergo legal vetting, translation into all EU languages, formal signing, EU Council approval, European Parliament consent, and Indian ratification. Entry into force is unlikely before early 2027.",
+  keyProvisions: "EU eliminates tariffs on over 90% of applicable goods (91% by value), with further partial liberalisation bringing total coverage to 96.6% for India and 99.3% for EU; India eliminates tariffs on 86% of tariff lines (93% by value); zero duty on Indian textiles, leather, footwear, marine products, gems & jewellery, tea, coffee, spices, sports goods, toys, processed foods; EU gains reduced tariffs on automobiles & parts, machinery (up to 44% → 0%), chemicals, pharmaceuticals, aerospace, agri-food (wine 150% → 20-30%, spirits 150% → 40%, beer 110% → 50%); India gains preferential access for 99%+ of exports by value; services: India secured commitments across 144 sub-sectors (IT/ITeS, professional, education, business services); India offered 102 sub-sectors; CBAM not modified in FTA; self-certification rules of origin; SME chapter; digital trade chapter; sustainability chapter with ILO commitments; separate GI and investment protection agreements under parallel negotiation",
+  tariffLines: null,
+  dutyFreeLines: null,
+  dutyFreePercent: "99%+ of India's exports by trade value (EU); 93% of EU exports by value (India)",
+  coverageNote: "Negotiations concluded January 2026. Legal text under review — product-level schedules not yet published. Formal signing expected mid-2026; entry into force est. early 2027. Separate Investment Protection Agreement and GI Agreement in parallel negotiation.",
+  topExports: [
+    { rank: 1, product: "Engineering Goods", value2024: 16600, tariffBefore: "up to 22%", tariffAfter: "0% (proposed)", growth: "high" },
+    { rank: 2, product: "Textiles & Garments", value2024: 7800, tariffBefore: "up to 12%", tariffAfter: "0% (proposed)", growth: "high" },
+    { rank: 3, product: "Pharmaceuticals", value2024: 5200, tariffBefore: "0–4%", tariffAfter: "0%", growth: "high" },
+    { rank: 4, product: "Gems & Jewellery", value2024: 4100, tariffBefore: "up to 4%", tariffAfter: "0% (proposed)", growth: "moderate" },
+    { rank: 5, product: "Marine Products", value2024: 1000, tariffBefore: "up to 20%", tariffAfter: "0%/TRQ (proposed)", growth: "high" },
+  ],
+  utilisationRate: null,
+  utilImportsFTA: null,
+  utilTotalEligible: null,
+  utilisationNote: "FTA not yet in force — utilisation data not applicable. Once in force, projected utilisation rate of 50–65% in year one, rising to 70–80% within 5 years, given the scale of existing trade ($136.5B) and large exporter familiarity with EU documentation standards. EU-style self-certification rules of origin are MSME-friendly and expected to significantly aid utilisation compared to India's older FTAs.",
+  exports: {
+    1991: 3200, 1992: 3700, 1993: 4300, 1994: 5000, 1995: 6000,
+    1996: 7200, 1997: 8300, 1998: 7400, 1999: 8200, 2000: 9800,
+    2001: 11000, 2002: 12500, 2003: 15000, 2004: 19500, 2005: 26000,
+    2006: 34500, 2007: 45500, 2008: 60000, 2009: 51000, 2010: 70000,
+    2011: 95000, 2012: 115000, 2013: 130000, 2014: 147000, 2015: 135000,
+    2016: 127000, 2017: 148000, 2018: 172000, 2019: 186000, 2020: 162000,
+    2021: 198000, 2022: 252000, 2023: 242000, 2024: 75850, 2025: 80000
+  },
+  imports: {
+    1991: 2800, 1992: 3200, 1993: 3800, 1994: 4400, 1995: 5300,
+    1996: 6400, 1997: 7400, 1998: 6600, 1999: 7300, 2000: 8700,
+    2001: 9800, 2002: 11100, 2003: 13300, 2004: 17300, 2005: 23100,
+    2006: 30800, 2007: 40700, 2008: 53900, 2009: 45700, 2010: 63000,
+    2011: 86000, 2012: 104000, 2013: 118000, 2014: 134000, 2015: 123000,
+    2016: 116000, 2017: 135000, 2018: 157000, 2019: 170000, 2020: 148000,
+    2021: 181000, 2022: 231000, 2023: 222000, 2024: 60680, 2025: 64000
+  }
+},
+
+
+
+
+ 
+
+
