@@ -1,5 +1,22 @@
 // India FTA Tracker - Comprehensive Data
 // Sources: Ministry of Commerce & Industry, WTO RTA Database, DGFT, respective partner government fact sheets
+//
+// ─── DATA QUALITY NOTES ──────────────────────────────────────────────────────
+// All trade figures are in USD million (calendar year basis unless noted).
+// Historical series (1991–2005) are estimates reconstructed from UN Comtrade / DGFT.
+// Post-2005 figures from DGFT annual reports and UN Comtrade.
+//
+// KNOWN ISSUES:
+// 1. UAE CEPA: exports & imports were transposed — corrected below.
+//    DGFT FY2023-24: India exports to UAE ~$35.6B, imports from UAE ~$49.2B.
+//    After correction, 2024 values: exports $40.2B / imports $52B (net ~-$11.8B deficit).
+// 2. Australia ECTA: Absolute values appear ~2x DGFT figures (DGFT FY23-24:
+//    India exports ~$8.6B, imports ~$16.6B). Balance direction is correct.
+// 3. Oman, New Zealand, EU 2024 values are FY 2024-25 (Apr 2024 onwards),
+//    not CY2024 — hence the apparent drop vs 2023 (CY basis).
+// 4. All data indicative — verify via https://tradestat.commerce.gov.in/ &
+//    https://comtradeplus.un.org/ before policy use.
+// ─────────────────────────────────────────────────────────────────────────────
 
 const FTA_DATA = [
 
@@ -521,16 +538,10 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 27360,
     utilTotalEligible: 36000,
     utilisationNote: "High utilisation in just 2 years. Gems/jewellery sector responding strongly to gold TRQ. Textiles and pharma export councils actively promoting FTA. UAE is India's largest bilateral FTA partner in trade value.",
-    exports: {
-      1991: 700, 1992: 820, 1993: 950, 1994: 1100, 1995: 1300,
-      1996: 1550, 1997: 1780, 1998: 1580, 1999: 1760, 2000: 2100,
-      2001: 2350, 2002: 2680, 2003: 3200, 2004: 4100, 2005: 5400,
-      2006: 7200, 2007: 9500, 2008: 12800, 2009: 11000, 2010: 15000,
-      2011: 20500, 2012: 24800, 2013: 28000, 2014: 31000, 2015: 28000,
-      2016: 26000, 2017: 30000, 2018: 34500, 2019: 37000, 2020: 31000,
-      2021: 37500, 2022: 51000, 2023: 47000, 2024: 52000, 2025: 58000
-    },
-    imports: {
+    // ⚠ DATA NOTE: exports & imports were transposed in original data — corrected here.
+    // India imports FROM UAE (crude oil, gold, LNG, petrochemicals) are larger than exports TO UAE.
+    // Cross-check: DGFT FY2023-24 India exports to UAE ~$35.6B; imports from UAE ~$49.2B.
+    exports: { // India's exports TO UAE (goods, USD million)
       1991: 480, 1992: 560, 1993: 650, 1994: 760, 1995: 900,
       1996: 1070, 1997: 1230, 1998: 1090, 1999: 1210, 2000: 1450,
       2001: 1630, 2002: 1850, 2003: 2210, 2004: 2850, 2005: 3750,
@@ -538,6 +549,15 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2011: 14500, 2012: 17600, 2013: 19900, 2014: 22200, 2015: 20000,
       2016: 18700, 2017: 21800, 2018: 25000, 2019: 27000, 2020: 22800,
       2021: 27900, 2022: 39000, 2023: 38000, 2024: 40200, 2025: 42500
+    },
+    imports: { // India's imports FROM UAE (goods, USD million)
+      1991: 700, 1992: 820, 1993: 950, 1994: 1100, 1995: 1300,
+      1996: 1550, 1997: 1780, 1998: 1580, 1999: 1760, 2000: 2100,
+      2001: 2350, 2002: 2680, 2003: 3200, 2004: 4100, 2005: 5400,
+      2006: 7200, 2007: 9500, 2008: 12800, 2009: 11000, 2010: 15000,
+      2011: 20500, 2012: 24800, 2013: 28000, 2014: 31000, 2015: 28000,
+      2016: 26000, 2017: 30000, 2018: 34500, 2019: 37000, 2020: 31000,
+      2021: 37500, 2022: 51000, 2023: 47000, 2024: 52000, 2025: 58000
     }
   },
 
@@ -575,6 +595,10 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 2494,
     utilTotalEligible: 4300,
     utilisationNote: "Good early-stage utilisation for a 2022 agreement. Textiles exporters responded fastest. RoO documentation still a learning curve for smaller manufacturers.",
+    // ⚠ DATA NOTE: Absolute values appear ~2x DGFT-reported figures.
+    // DGFT FY2023-24: India exports to Australia ~$8.6B, imports ~$16.6B.
+    // Balance direction (deficit, mainly coal/LNG) is correct.
+    // Pending correction against DGFT Annual Report. Verify: https://dgft.gov.in/
     exports: {
       1991: 180, 1992: 210, 1993: 245, 1994: 295, 1995: 360,
       1996: 440, 1997: 510, 1998: 450, 1999: 500, 2000: 610,
@@ -737,6 +761,9 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: null,
     utilTotalEligible: null,
     utilisationNote: "CEPA signed December 2025 — not yet in force. No utilisation data available. Projected early utilisation high given Day 1 tariff elimination on 97.96% of Omani lines.",
+    // ⚠ DATA NOTE: 2024 values (exports $4,060M, imports $6,550M) are FY 2024-25
+    // (April 2024 – March 2025) full-year figures, NOT calendar year 2024.
+    // The apparent drop from 2023 (CY basis) reflects the FY vs CY change for this entry.
     exports: {
       1991: 80, 1992: 95, 1993: 110, 1994: 130, 1995: 155,
       1996: 185, 1997: 215, 1998: 190, 1999: 210, 2000: 255,
@@ -744,7 +771,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 950, 2007: 1250, 2008: 1650, 2009: 1400, 2010: 1950,
       2011: 2700, 2012: 3300, 2013: 3800, 2014: 4300, 2015: 3900,
       2016: 3600, 2017: 4200, 2018: 4900, 2019: 5300, 2020: 4500,
-      2021: 5500, 2022: 7100, 2023: 6800, 2024: 4060, 2025: 4200
+      2021: 5500, 2022: 7100, 2023: 6800, 2024: 4060, 2025: 4200 // 2024 = FY2024-25
     },
     imports: {
       1991: 180, 1992: 210, 1993: 245, 1994: 295, 1995: 360,
@@ -753,7 +780,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 2200, 2007: 2900, 2008: 3800, 2009: 3200, 2010: 4400,
       2011: 5700, 2012: 6800, 2013: 7600, 2014: 8500, 2015: 7600,
       2016: 7100, 2017: 8200, 2018: 9500, 2019: 10200, 2020: 8800,
-      2021: 10700, 2022: 13500, 2023: 13000, 2024: 6550, 2025: 6800
+      2021: 10700, 2022: 13500, 2023: 13000, 2024: 6550, 2025: 6800 // 2024 = FY2024-25
     }
   },
 
