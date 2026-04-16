@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>India FTA Tracker</title>
+<title>Beyond Signatures: Evaluating India's Free Trade Agreements</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -43,17 +43,6 @@
     border-bottom: 1px solid var(--navy-border);
     background: linear-gradient(180deg, rgba(200,134,10,0.05) 0%, transparent 100%);
     overflow: hidden;
-  }
-  header::before {
-    content: 'भारत';
-    position: absolute;
-    right: 3rem; top: 50%;
-    transform: translateY(-50%);
-    font-size: 9rem;
-    font-family: 'DM Serif Display', serif;
-    color: rgba(200,134,10,0.05);
-    pointer-events: none;
-    line-height: 1;
   }
   .header-tag {
     font-family: 'JetBrains Mono', monospace;
@@ -809,27 +798,94 @@
     pointer-events: none;
     color: var(--saffron);
   }
+
+  /* ─── TABLE LEGEND ─── */
+  .table-legend {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--white-dim);
+    margin-bottom: 0.6rem;
+    padding: 0.45rem 0.75rem;
+    background: var(--navy);
+    border-radius: 5px;
+    border: 1px solid var(--navy-border);
+  }
+  .legend-bar-sample {
+    display: inline-block;
+    width: 36px;
+    height: 6px;
+    background: var(--saffron);
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ─── CONCLUSION TABLE ─── */
+  .conclusion-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+  }
+  .conclusion-table th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.60rem;
+    letter-spacing: 0.1em;
+    color: var(--saffron);
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--navy-border);
+    background: var(--navy);
+    white-space: nowrap;
+  }
+  .conclusion-table td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid rgba(28,26,20,0.07);
+    color: var(--white);
+    vertical-align: middle;
+  }
+  .conclusion-table tr:hover td { background: var(--white-faint); }
+
+  /* ─── REPORT & SITE FOOTER ─── */
+  .report-footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--navy-border);
+    font-size: 0.72rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--white-dim);
+    text-align: center;
+  }
+  .report-footer a { color: var(--saffron); text-decoration: none; }
+  .site-footer {
+    text-align: center;
+    padding: 1.25rem 2rem;
+    border-top: 1px solid var(--navy-border);
+    font-size: 0.68rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--white-dim);
+    background: var(--navy-mid);
+    letter-spacing: 0.04em;
+  }
+  .site-footer a { color: var(--saffron); text-decoration: none; }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="header-tag">Research Tracker</div>
-  <h1>India <span>FTA</span> Tracker</h1>
-  <p class="header-sub">Tracking all 16 Free Trade Agreements signed by India — from SAPTA (1995) to the India–EU FTA (2026)</p>
-  <div class="header-stats">
-    <div class="hstat"><span class="hstat-val">16</span><span class="hstat-label">Signed FTAs</span></div>
-    <div class="hstat"><span class="hstat-val">55</span><span class="hstat-label">Partner Countries</span></div>
-    <div class="hstat"><span class="hstat-val">31yr</span><span class="hstat-label">Timeline (1995–2026)</span></div>
-    <div class="hstat"><span class="hstat-val">9</span><span class="hstat-label">In Force</span></div>
-  </div>
+  <div class="header-tag">Policy Analysis · Takshashila Institution</div>
+  <h1>Beyond <span>Signatures</span></h1>
+  <p class="header-sub">An empirical assessment of India's 15 Free Trade Agreements — evaluating export performance and utilisation rates across three decades of trade diplomacy.</p>
 </header>
 
 <div class="main-layout">
   <!-- TIMELINE SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-header">
-      <h2>Chronological Timeline</h2>
+      <h2>Index</h2>
     </div>
     <div class="timeline-line" id="timeline"></div>
   </aside>
@@ -861,5 +917,10 @@
 
 <script src="fta-data.js"></script>
 <script src="app.js"></script>
+
+<footer class="site-footer">
+  For comments and feedback, contact <a href="mailto:anisree@takshashila.org.in">anisree@takshashila.org.in</a>
+  &nbsp;·&nbsp; Takshashila Institution &nbsp;·&nbsp; 2025
+</footer>
 </body>
 </html>

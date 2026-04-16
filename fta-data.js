@@ -20,59 +20,7 @@
 
 const FTA_DATA = [
 
-  // ─── 1. SAARC PTA (1995) ───
-  {
-    id: "saarc-pta",
-    year: 1995,
-    signedYear: 1993,
-    effectiveYear: 1995,
-    name: "SAPTA",
-    fullName: "SAARC Preferential Trading Arrangement",
-    partner: "SAARC Members",
-    partnerCountries: ["Bangladesh", "Bhutan", "Maldives", "Nepal", "Pakistan", "Sri Lanka"],
-    status: "active",
-    type: "PTA",
-    balanceType: "mixed",
-    currentBalance: "+$2.1B",
-    balanceNote: "Surplus (excl. Pakistan)",
-    signed: "11 April 1993",
-    effective: "7 December 1995",
-    summary: "India's first multilateral preferential trade arrangement within South Asia under the SAARC framework. SAPTA granted tariff concessions on a positive-list basis covering select goods. It was the precursor to SAFTA (2006) and aimed to promote intra-regional trade among the seven SAARC nations. India offered 226 tariff concessions initially, with the arrangement evolving through four rounds of negotiations (1995, 1997, 1998, 2000).",
-    keyProvisions: "Preferential tariff reductions on positive-list goods; 226 Indian tariff concessions; four negotiating rounds; rules of origin at 40% domestic content; exclusion of sensitive lists",
-    tariffLines: 226,
-    dutyFreeLines: 0,
-    dutyFreePercent: "Partial — margin of preference only",
-    coverageNote: "Positive-list only; not comprehensive",
-    topExports: [
-      { rank: 1, product: "Petroleum Products", value2024: 1200, tariffBefore: "12%", tariffAfter: "5–8%", growth: "moderate" },
-      { rank: 2, product: "Cotton Yarn & Fabrics", value2024: 380, tariffBefore: "25%", tariffAfter: "12%", growth: "high" },
-      { rank: 3, product: "Pharmaceuticals", value2024: 290, tariffBefore: "15%", tariffAfter: "7%", growth: "high" },
-      { rank: 4, product: "Machinery & Equipment", value2024: 220, tariffBefore: "20%", tariffAfter: "10%", growth: "moderate" },
-      { rank: 5, product: "Vegetables & Spices", value2024: 180, tariffBefore: "30%", tariffAfter: "15%", growth: "low" },
-    ],
-    utilisationRate: 42,
-    utilImportsFTA: 420,
-    utilTotalEligible: 1000,
-    utilisationNote: "Low utilisation due to complex rules of origin and lack of awareness among SMEs; NTBs a key constraint within SAARC.",
-    exports: { // USD million
-      1995: 1850, 1996: 2050, 1997: 2200, 1998: 2100, 1999: 2300,
-      2000: 2450, 2001: 2600, 2002: 2800, 2003: 3100, 2004: 3500,
-      2005: 4200, 2006: 5100, 2007: 6200, 2008: 7500, 2009: 6800,
-      2010: 8200, 2011: 9800, 2012: 10500, 2013: 11200, 2014: 12000,
-      2015: 11400, 2016: 11000, 2017: 11800, 2018: 13200, 2019: 13800,
-      2020: 12000, 2021: 14500, 2022: 18200, 2023: 17800, 2024: 18500, 2025: 19200
-    },
-    imports: {
-      1995: 800, 1996: 850, 1997: 900, 1998: 950, 1999: 1000,
-      2000: 1100, 2001: 1150, 2002: 1200, 2003: 1300, 2004: 1450,
-      2005: 1600, 2006: 1800, 2007: 2100, 2008: 2400, 2009: 2200,
-      2010: 2600, 2011: 3100, 2012: 3400, 2013: 3700, 2014: 4000,
-      2015: 3800, 2016: 3600, 2017: 3900, 2018: 4300, 2019: 4500,
-      2020: 3900, 2021: 4700, 2022: 5800, 2023: 5600, 2024: 5900, 2025: 6100
-    }
-  },
-
-  // ─── 2. India-Sri Lanka FTA (2000) ───
+  // ─── 1. India-Sri Lanka FTA (2000) ───
   {
     id: "india-sri-lanka",
     year: 2000,
@@ -253,6 +201,13 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     effective: "1 August 2005",
     summary: "India's first CECA and one of its most comprehensive bilateral agreements, covering goods, services, investments, and economic cooperation. Singapore is a key gateway for Indian exports to Southeast Asia and a major source of foreign investment into India. The agreement covers over 5,400 tariff lines with phased elimination. A review completed in 2018 upgraded the agreement. Pharmaceuticals, electronics, and engineering goods are major Indian exports. India runs a goods trade surplus but services surplus also flows to India via Singapore-based companies.",
     keyProvisions: "Tariff elimination on 5,400+ lines; services liberalisation under 80+ sub-sectors; investment protection; mutual recognition of professionals; IP cooperation; e-commerce provisions added in review; India's sensitive list protects agriculture and certain manufactures",
+    keyProvisionsDetailed: [
+      { title: "Comprehensive Goods Coverage — 5,400+ Tariff Lines", note: "India–Singapore CECA eliminated tariffs on 5,400+ tariff lines, making it one of India's most comprehensive bilateral goods agreements at the time of signing (2005). Singapore's near-zero MFN tariff regime meant the primary value for Indian exporters was in locking in market access certainty and using Singapore as a gateway hub to ASEAN." },
+      { title: "Services Liberalisation Across 80+ Sub-sectors", note: "One of India's earliest and most ambitious services chapters, covering over 80 sub-sectors including IT/ITeS, financial services, logistics, and professional services. This was critical for Indian IT firms seeking to establish Singapore-based holding companies and regional headquarters — Singapore became the primary offshore hub for India's tech industry." },
+      { title: "Mutual Recognition of Professionals", note: "The CECA included mutual recognition arrangements (MRAs) for qualified professionals — engineers, architects, and accountants — allowing Indian professionals to practice in Singapore with streamlined credential recognition. This provision has been politically contentious in Singapore, where it was incorrectly conflated with open immigration policy." },
+      { title: "Investment Protection Chapter", note: "A robust investment protection chapter guaranteed non-discriminatory treatment for Indian investors in Singapore and vice versa, with ISDS (investor-state dispute settlement) provisions. This underpinned Singapore's emergence as the single largest source of FDI into India (often routing third-country capital), making Singapore India's most important investment partner by treaty." },
+      { title: "2018 Review — E-Commerce Chapter", note: "A landmark 2018 review of the CECA added an e-commerce chapter, one of India's first in any trade agreement. This covered electronic transactions, digital signatures, online consumer protection, and cross-border data flows — reflecting both countries' growing digital economies. The review also deepened financial services commitments and updated services schedules." },
+    ],
     tariffLines: 5400,
     dutyFreeLines: 4860,
     dutyFreePercent: "90%",
@@ -361,6 +316,13 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     effective: "1 January 2010",
     summary: "A comprehensive agreement between India and South Korea covering goods, services, investments, and IPR. India eliminated duties on 74.7% of tariff lines by value; Korea on 93% of lines. Post-FTA, India's trade deficit with Korea widened from $5.3B to $15.4B, largely driven by Korean electronics, ships, and steel exports. India has been seeking a review since 2021 to reduce this asymmetry. Key Indian exports include petroleum products, pharmaceuticals, cotton, and engineering goods. The agreement was one of the first to include services liberalisation with India.",
     keyProvisions: "India: 74.7% of lines to 0% (Normal Track); Korea: 93% of lines; India sensitive list (850 lines); services chapters with Mode 3 and Mode 4 liberalisation; investment protection; RoO at 35% CTH or 45% value addition",
+    keyProvisionsDetailed: [
+      { title: "Asymmetric Liberalisation — 93% vs 74.7%", note: "Korea committed to eliminate tariffs on 93% of its tariff lines by value, while India committed to only 74.7%. This asymmetry (in India's favour) was designed to give Indian exporters preferential access to Korea's sophisticated consumer and industrial market — particularly valuable for pharmaceuticals, textiles, and engineering goods. In practice, Korea's exporters (electronics, steel, autos) proved far more competitive, and India's trade deficit widened from $5.3B in 2010 to $15.4B by 2024." },
+      { title: "Services Mode 3 & Mode 4 — Investment & Professional Mobility", note: "The agreement included services chapters covering Mode 3 (commercial presence / FDI) and Mode 4 (movement of natural persons), allowing Korean firms to establish subsidiaries in India and Indian IT and healthcare professionals to work in Korea. However, Mode 4 commitments remain largely aspirational — India's demand for a more open labour mobility chapter has been a persistent feature of its CEPA negotiations." },
+      { title: "Investment Protection & ISDS", note: "A bilateral investment protection chapter with investor-state dispute settlement (ISDS) provisions gave Korean conglomerates (Hyundai, Samsung, LG, POSCO) legal certainty for their large manufacturing investments in India. This provision directly catalysed Korean FDI into India's automotive (Tamil Nadu, Haryana) and electronics sectors, making Korea one of India's top FDI sources by the 2010s." },
+      { title: "Widening Deficit — India Seeks Review", note: "The India–Korea CEPA has become a case study in FTA deficit asymmetry: India's deficit widened from ~$5.3B in 2010 to ~$15.4B by 2024, driven by Korean ships, steel, electronics, and display panels. India has been formally seeking a review since 2021 to address non-tariff barriers and to renegotiate rules of origin for sectors like steel where Korean exporters have a cost advantage." },
+      { title: "RoO Complexity — Indian Exporter Barrier", note: "Rules of Origin under the Korea CEPA are product-specific and require either a change in tariff heading (CTH criterion) or 45% value addition — more complex than standard Indian FTA RoO. This has suppressed Indian exporter utilisation (currently ~38%) as SME exporters in textiles, pharmaceuticals, and auto parts find RoO compliance documentation burdensome relative to the tariff benefit." },
+    ],
     tariffLines: 12000,
     dutyFreeLines: 8964,
     dutyFreePercent: "74.7% by value",
@@ -415,6 +377,13 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     effective: "1 August 2011",
     summary: "India–Japan CEPA is one of India's most significant bilateral trade agreements, covering goods, services, investment, IPR, competition, and government procurement. Japan offered zero duty on 97% of its tariff lines within 10 years of the agreement; India committed to liberalising 90% of its tariff universe. Japan is a major investor in India's manufacturing and infrastructure sectors. Key Indian exports include petroleum products, chemicals, marine products, and textiles. Japan's auto parts, electronics, and specialty chemicals dominate Indian imports. The agreement catalysed Japanese FDI into India's automobile and electronics sectors.",
     keyProvisions: "Japan: zero duty on 97% of tariff lines (by value) within 10 years; India: 90% of lines liberalised; services liberalisation across 100+ sub-sectors; investment protection and promotion; IP chapter; competition policy; government procurement transparency; comprehensive RoO with product-specific rules",
+    keyProvisionsDetailed: [
+      { title: "IP Chapter — India's First Comprehensive FTA Intellectual Property Provisions", note: "India–Japan CEPA included one of India's first dedicated intellectual property chapters in an FTA, covering patents, trademarks, geographical indications, copyright, and industrial designs. This set a precedent for future Indian FTAs and reflected Japan's strong interest in IP protection for its technology, automotive, and pharmaceutical sectors operating in India. The chapter has since influenced the structure of India's IP chapters in UAE CEPA, Australia ECTA, and UK CETA." },
+      { title: "Competition Policy Chapter — A Landmark Provision", note: "A standalone competition policy chapter was unprecedented in Indian FTA practice at the time of signing (2011). Most Indian FTAs only address tariffs; this chapter ensures that anti-competitive practices — cartels, abuse of dominance, bid-rigging — cannot be used to nullify the tariff concessions negotiated. This provision was modelled on the EU's internal market competition framework and reflected Japan's concern about state-owned enterprise advantages in India." },
+      { title: "Services Liberalisation Across 100+ Sub-sectors", note: "One of India's most comprehensive services chapters at the time of signing, covering 100+ sub-sectors including IT services, financial services, professional services (architecture, engineering), and education. This reflected Japan's growing demand for skilled Indian IT professionals and India's ambition to deepen services exports to a G7 economy. Japan's own demographic challenge (ageing population) made Mode 4 (professional mobility) commitments especially significant." },
+      { title: "Government Procurement Transparency", note: "The agreement included government procurement transparency provisions — a first for India — requiring both sides to publish procurement notices and award contracts through open, non-discriminatory processes above specified thresholds. This theoretically opened Japanese government contracting to Indian firms, particularly in IT and infrastructure, though actual penetration has been limited by language barriers and procurement culture differences." },
+      { title: "Japan's 97% Liberalisation — High Ambition, Low Utilisation", note: "Japan committed to zero duty on 97% of its tariff lines by value within 10 years — one of the highest liberalisation offers India has received from any partner. This covered almost the entire range of Indian export interest including petroleum products, marine products, chemicals, and textiles. Despite this, Indian utilisation remains low at 31% — complex product-specific RoO and certification costs are key barriers, underscoring that market access on paper does not automatically translate to export gains without active exporter support." },
+    ],
     tariffLines: 9018,
     dutyFreeLines: 8116,
     dutyFreePercent: "90% (India), 97% (Japan)",
@@ -523,6 +492,13 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     effective: "1 May 2022",
     summary: "Negotiated in a record 88 days and entered into force in just over 2 months, the India–UAE CEPA is one of India's most significant recent trade deals and a template for India's new-generation FTAs. It covers 90% of goods (tariff lines), 100+ service sectors, and includes chapters on digital trade, IPR, government procurement, and dispute settlement. UAE agreed to zero duty on 97.5% of Indian tariff lines (by value) immediately. India eliminated duties on 90% of UAE lines. Bilateral trade target: $100B by 2030 (vs $72.9B in 2022–23). Key for India's gems, jewellery, textiles, engineering goods, and pharma exports.",
     keyProvisions: "UAE: zero duty on 97.5% of Indian goods (by value) from Day 1; India: 90% of UAE lines; zero duty on Indian gold jewellery at reduced rate (5% → tariff rate quota scheme); services liberalisation across 100+ sectors; digital trade chapter; IP chapter; government procurement; dispute settlement mechanism; bilateral investment treaty provisions",
+    keyProvisionsDetailed: [
+      { title: "Negotiated in 88 Days — A New Template for Indian FTAs", note: "The India–UAE CEPA was negotiated in a record 88 days (November 2021 – February 2022), breaking all precedents for Indian trade negotiation timelines. This speed was possible due to strong political will at the highest level (PM Modi – Crown Prince MBS relationship), a focused scope, and both sides' willingness to defer politically sensitive items. The 88-day model has since become an explicit template for India's subsequent FTA push (UK, Australia, Oman, New Zealand)." },
+      { title: "UAE Day-1 Zero Duty on 97.5% — Immediate Market Access", note: "UAE offered zero-duty access on 97.5% of Indian goods by trade value from the very first day the agreement entered into force (1 May 2022). This 'Day 1' full liberalisation was unprecedented for India — previous FTAs had phased schedules over 5–15 years. For Indian exporters in gems & jewellery, textiles, engineering goods, and pharmaceuticals, this meant immediate tariff savings with no waiting period." },
+      { title: "Gold Jewellery TRQ — A Breakthrough for India's Gems Sector", note: "Indian gold jewellery had historically faced a 5% UAE customs duty, which constrained exports from Surat and Mumbai. The CEPA established a Tariff Rate Quota (TRQ) mechanism allowing a defined volume of Indian gold jewellery to enter UAE at zero duty, with duty on volumes above the quota remaining. This directly benefited India's $46B gems & jewellery industry, which is the second-largest goods export sector and a major employer in Gujarat and Maharashtra." },
+      { title: "Digital Trade Chapter — India's First", note: "The India–UAE CEPA included India's first standalone digital trade chapter in any trade agreement, covering electronic authentication, digital signatures, online consumer protection, paperless trading, and cross-border data flows. While the chapter does not mandate data localisation relaxation (a politically sensitive issue in India), it signals India's intent to include digital trade disciplines in its new-generation FTAs — subsequently replicated in UK CETA and India–EU FTA." },
+      { title: "Dispute Settlement Mechanism — Enforceable Commitments", note: "Unlike some earlier Indian FTAs (SAFTA, ISLFTA) where dispute resolution was weak, the UAE CEPA includes a robust state-to-state dispute settlement mechanism with defined timelines, panel procedures, and remedies including compensation and suspension of concessions. This reflects India's shift towards WTO-plus dispute settlement in new-generation agreements, giving exporters greater confidence that market access commitments will be enforced." },
+    ],
     tariffLines: 11908,
     dutyFreeLines: 10717,
     dutyFreePercent: "90% (India), 97.5% (UAE)",
@@ -580,6 +556,13 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     effective: "29 December 2022",
     summary: "The India–Australia ECTA was an interim agreement preceding a full CECA (negotiations ongoing). It gave Australian goods zero-duty access to India on 96.4% of tariff lines (by value) immediately or over time. India gained zero-duty access on 85% of Australian tariff lines. Key Australian exports to India include coal, LNG, education services, and agricultural products. Key Indian exports include textiles, garments, pharmaceuticals, and engineering goods. The agreement was significant for both countries seeking to reduce dependence on China in supply chains. The ECTA eliminated the 5% tariff on Indian textiles and garments into Australia.",
     keyProvisions: "Australia: zero duty on 96.4% of Indian goods (by value); India: zero duty or reduction on 85% of Australian lines; zero duty on Indian textiles/garments into Australia from Day 1; critical minerals cooperation chapter; services to be covered under full CECA; rules of origin at 35–45%; TRQ on lentils and chickpeas for India",
+    keyProvisionsDetailed: [
+      { title: "India's First FTA with a Developed G20 Economy", note: "The India–Australia ECTA is India's first trade agreement with a developed G20 economy — a milestone after decades of stalled negotiations with the EU, UK, and others. This symbolic significance was intentional: both governments wanted to signal that India could conclude high-quality agreements with advanced economies, building credibility for subsequent UK and EU negotiations. Australia's willingness to offer near-complete liberalisation (96.4%) on Day 1 reflected its strategic interest in diversifying supply chains away from China." },
+      { title: "Zero Duty on Indian Textiles from Day 1 — Tirupur's Windfall", note: "Australian tariffs on Indian textiles and garments (previously 5%) were eliminated entirely from Day 1 of the ECTA (29 December 2022). This was a major win for India's textile hubs in Tirupur (Tamil Nadu), Surat (Gujarat), and Bhiwandi (Maharashtra), which had been losing ground to Bangladesh and Vietnam in the Australian market due to duty disadvantages. Early trade data shows a sharp uptick in textile exports, with utilisaiton among the highest across all product categories." },
+      { title: "Critical Minerals Cooperation Chapter", note: "A dedicated critical minerals cooperation chapter was included — one of the first in any Indian trade agreement. This covers lithium, cobalt, nickel, and rare earth elements, where Australia has vast reserves and India has emerging demand for EV batteries, defence, and semiconductor manufacturing. The chapter establishes joint working groups, facilitates mining investment by Australian firms in India, and creates a framework for supply chain integration — reflecting both countries' strategic interest in reducing dependence on Chinese mineral processing." },
+      { title: "Interim ECTA — Full CECA Pending", note: "The ECTA is explicitly an interim agreement, covering goods and some services, with a full Comprehensive Economic Cooperation Agreement (CECA) under negotiation. Services (especially IT/ITeS, education, healthcare, and professional services), investment, government procurement, and intellectual property are to be addressed in the CECA. India's IT industry, which has a strong interest in Mode 4 commitments (professional visa mobility) and Mode 1 (cross-border digital services), is the primary stakeholder watching CECA negotiations." },
+      { title: "TRQ on Australian Lentils and Chickpeas into India", note: "India agreed to a Tariff Rate Quota (TRQ) allowing a defined volume of Australian lentils and chickpeas to enter India at reduced duty — a sensitive concession given India's large domestic pulse farming community. Australia is the world's second-largest lentil exporter, and Indian importers (food processors, dal mills) have a strong commercial interest. The TRQ was carefully calibrated not to undercut domestic farmers — an example of managed liberalisation balancing trade and agricultural policy." },
+    ],
     tariffLines: 6732,
     dutyFreeLines: 5719,
     dutyFreePercent: "85% (India), 96.4% (Australia)",
