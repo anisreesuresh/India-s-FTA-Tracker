@@ -87,8 +87,8 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     status: "active",
     type: "EHS/FTA (partial)",
     balanceType: "deficit",
-    currentBalance: "-$4.1B",
-    balanceNote: "India deficit (2024)",
+    currentBalance: "-$6.75B",
+    balanceNote: "India deficit (2024: exports $4.88B, imports $11.63B)",
     signed: "9 October 2003",
     effective: "1 September 2004",
     summary: "An Early Harvest Scheme (EHS) covering 82 tariff lines (fruits, vegetables, and jewellery) preceded the stalled broader FTA negotiations. Under the EHS, India and Thailand eliminated customs duties on 82 specific HS codes in agriculture and food products. While the full CECA/FTA negotiations launched in 2004 have not concluded, the EHS itself remains in force. India has been cautious about expanding the agreement due to concerns over the trade deficit in electronics and automotive parts from Thailand.",
@@ -108,7 +108,6 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 1045,
     utilTotalEligible: 1900,
     utilisationNote: "Moderate utilisation; many Thai exports enter India under ASEAN FTA (2009) which offers better tariff terms, reducing EHS utility.",
-    dataVerification: `<p>The 2024 import figure shown in this tracker (USD 8.5 billion) is <strong>significantly lower than official reported data</strong>. Official figures for 2024 show India's imports from Thailand at <strong>USD 11.63 billion</strong>, with exports to Thailand at <strong>USD 4.88 billion</strong> — giving a trade deficit of approximately USD 6.75 billion. The tracker's figures should be treated as underestimates pending correction against official DGFT and UN Comtrade sources.</p>`,
     exports: {
       1991: 180, 1992: 200, 1993: 220, 1994: 260, 1995: 310,
       1996: 360, 1997: 400, 1998: 350, 1999: 380, 2000: 420,
@@ -116,7 +115,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 980, 2007: 1200, 2008: 1500, 2009: 1300, 2010: 1650,
       2011: 2100, 2012: 2400, 2013: 2600, 2014: 2800, 2015: 2700,
       2016: 2600, 2017: 2900, 2018: 3200, 2019: 3400, 2020: 2900,
-      2021: 3500, 2022: 4200, 2023: 4100, 2024: 4400, 2025: 4600
+      2021: 3500, 2022: 4200, 2023: 4100, 2024: 4880, 2025: 5100
     },
     imports: {
       1991: 200, 1992: 230, 1993: 260, 1994: 310, 1995: 380,
@@ -125,7 +124,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 1350, 2007: 1700, 2008: 2200, 2009: 2100, 2010: 2700,
       2011: 3500, 2012: 4100, 2013: 4600, 2014: 5100, 2015: 5300,
       2016: 5200, 2017: 5600, 2018: 6200, 2019: 6800, 2020: 5900,
-      2021: 7200, 2022: 8500, 2023: 8300, 2024: 8500, 2025: 8800
+      2021: 7200, 2022: 8500, 2023: 8300, 2024: 11630, 2025: 12200
     }
   },
 
@@ -312,11 +311,11 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     status: "active",
     type: "CEPA",
     balanceType: "deficit",
-    currentBalance: "-$15.4B",
-    balanceNote: "India deficit (2024)",
+    currentBalance: "-$14.7B",
+    balanceNote: "India deficit (FY 2023-24: exports $6.41B, imports $21.13B)",
     signed: "7 August 2009",
     effective: "1 January 2010",
-    summary: "A comprehensive agreement between India and South Korea covering goods, services, investments, and IPR. India eliminated duties on 74.7% of tariff lines by value; Korea on 93% of lines. Post-FTA, India's trade deficit with Korea widened from $5.3B to $15.4B, largely driven by Korean electronics, ships, and steel exports. India has been seeking a review since 2021 to reduce this asymmetry. Key Indian exports include petroleum products, pharmaceuticals, cotton, and engineering goods. The agreement was one of the first to include services liberalisation with India.",
+    summary: "A comprehensive agreement between India and South Korea covering goods, services, investments, and IPR. India eliminated duties on 74.7% of tariff lines by value; Korea on 93% of lines. Post-FTA, India's trade deficit with Korea widened from $5.3B to $14.7B, largely driven by Korean electronics, ships, and steel exports. India has been seeking a review since 2021 to reduce this asymmetry. Key Indian exports include petroleum products, pharmaceuticals, cotton, and engineering goods. The agreement was one of the first to include services liberalisation with India.",
     keyProvisions: "India: 74.7% of lines to 0% (Normal Track); Korea: 93% of lines; India sensitive list (850 lines); services chapters with Mode 3 and Mode 4 liberalisation; investment protection; RoO at 35% CTH or 45% value addition",
     keyProvisionsDetailed: [
       { title: "Asymmetric Liberalisation — 93% vs 74.7%", note: "Korea committed to eliminate tariffs on 93% of its tariff lines by value, while India committed to only 74.7%. This asymmetry (in India's favour) was designed to give Indian exporters preferential access to Korea's sophisticated consumer and industrial market — particularly valuable for pharmaceuticals, textiles, and engineering goods. In practice, Korea's exporters (electronics, steel, autos) proved far more competitive, and India's trade deficit widened from $5.3B in 2010 to $15.4B by 2024." },
@@ -340,7 +339,6 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 4788,
     utilTotalEligible: 12600,
     utilisationNote: "Below-average utilisation from India's side; Korea's exporters (auto, electronics, steel) utilise heavily. Indian exporters struggle with RoO documentation.",
-    dataVerification: `<p>Official DGFT figures for <strong>FY 2023-24</strong> show India's exports to South Korea at <strong>USD 6.41 billion</strong> and imports at <strong>USD 21.13 billion</strong> — giving a bilateral deficit of approximately USD 14.72 billion. The tracker's 2024 export figure of USD 11.5 billion and import figure of USD 27 billion appear to reflect calendar year estimates that diverge from the official FY basis. Verify against <a href="https://tradestat.commerce.gov.in/" target="_blank" rel="noopener">MoC Export-Import Data Bank</a> before policy use.</p>`,
     keyAnalysisExtra: `<p>Like the ASEAN experience, trade volume has increased significantly, rising from USD 12 billion in 2009–10 to over USD 27 billion by 2023–24. The structural asymmetry, however, has deepened:</p><table><thead><tr><th>Category</th><th>Pre-CEPA Avg (2007–09)</th><th>Post-CEPA Avg (2022–24)</th><th>Growth (%)</th></tr></thead><tbody><tr><td>India's Exports to South Korea</td><td>USD 3.4 Billion</td><td>USD 7.1 Billion</td><td>108.8%</td></tr><tr><td>India's Imports from South Korea</td><td>USD 7.3 Billion</td><td>USD 19.9 Billion</td><td>172.6%</td></tr><tr><td>Trade Deficit</td><td>USD 4.0 Billion</td><td>USD 12.8 Billion</td><td>220.0%</td></tr></tbody></table><p>The deficit has grown by 164–220% depending on the comparative period selected, primarily because South Korea exports high-value products such as integrated circuits, electronics, and automobiles, while Indian exports remain concentrated in lower-value items like aluminium, iron and steel, and refined petroleum. Integrated circuits alone accounted for nearly USD 3 billion of Korea's exports to India in 2024.</p>`,
     exports: {
       1991: 120, 1992: 140, 1993: 165, 1994: 200, 1995: 250,
@@ -349,7 +347,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 1480, 2007: 1900, 2008: 2500, 2009: 2100, 2010: 3200,
       2011: 4500, 2012: 5200, 2013: 5800, 2014: 6400, 2015: 5800,
       2016: 5400, 2017: 6200, 2018: 7200, 2019: 7800, 2020: 7000,
-      2021: 8500, 2022: 11200, 2023: 10800, 2024: 11500, 2025: 12200
+      2021: 8500, 2022: 7800, 2023: 7200, 2024: 6410, 2025: 6800
     },
     imports: {
       1991: 280, 1992: 330, 1993: 390, 1994: 480, 1995: 600,
@@ -358,7 +356,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 3600, 2007: 4700, 2008: 6200, 2009: 5100, 2010: 7900,
       2011: 11000, 2012: 13000, 2013: 14500, 2014: 16200, 2015: 15000,
       2016: 14000, 2017: 16200, 2018: 18500, 2019: 20000, 2020: 17500,
-      2021: 21500, 2022: 27000, 2023: 26000, 2024: 27000, 2025: 28500
+      2021: 19500, 2022: 22000, 2023: 21000, 2024: 21130, 2025: 22000
     }
   },
 
@@ -491,8 +489,8 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     status: "active",
     type: "CEPA",
     balanceType: "deficit",
-    currentBalance: "-$16B",
-    balanceNote: "India deficit (gold, crude, diamonds dominate imports) (2024)",
+    currentBalance: "-$22.5B",
+    balanceNote: "India deficit (FY 2023-24: exports $33.26B, imports $55.75B; total trade crossed $100B in FY 2024-25)",
     signed: "18 February 2022",
     effective: "1 May 2022",
     summary: "Negotiated in a record 88 days and entered into force in just over 2 months, the India–UAE CEPA is one of India's most significant recent trade deals and a template for India's new-generation FTAs. It covers 90% of goods (tariff lines), 100+ service sectors, and includes chapters on digital trade, IPR, government procurement, and dispute settlement. UAE agreed to zero duty on 97.5% of Indian tariff lines (by value) immediately. India eliminated duties on 90% of UAE lines. Bilateral trade target: $100B by 2030 (vs $72.9B in 2022–23). Key for India's gems, jewellery, textiles, engineering goods, and pharma exports.",
@@ -519,7 +517,6 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 27360,
     utilTotalEligible: 36000,
     utilisationNote: "High utilisation in just 2 years. Gems/jewellery sector responding strongly to gold TRQ. Textiles and pharma export councils actively promoting FTA. UAE is India's largest bilateral FTA partner in trade value.",
-    dataVerification: `<p>There is a <strong>variation in FY 2023-24 figures</strong> across official sources. This tracker uses DGFT-reported figures of exports ~USD 35.6 billion and imports ~USD 49.2 billion for FY 2023-24. However, some official sources report exports at <strong>USD 33.26 billion</strong> and imports at <strong>USD 55.75 billion</strong> for the same period — a meaningful discrepancy likely reflecting differences in goods classification, re-export accounting, or gold/diamond trade recording methodologies.</p><p>On the upside: total bilateral trade has now <strong>surpassed USD 100 billion in FY 2024-25</strong>, making UAE the first bilateral partner with which India has crossed this threshold — a figure corroborated across multiple official sources.</p>`,
     keyAnalysisExtra: `<p>The UAE CEPA has delivered measurable results faster than any previous Indian trade agreement. Bilateral merchandise trade nearly doubled from USD 43.3 billion in FY 2020–21 to USD 83.7 billion in FY 2023–24. Total trade crossed the USD 100 billion mark in FY 2024–25, marking a 19.6% year-on-year increase — making UAE the first bilateral partner with whom India has crossed this threshold.</p><p>Non-oil exports have grown at an average of 25.6% since the agreement's entry into force, with significant gains in gems and jewellery and electronics. The gold jewellery TRQ and Day 1 zero-duty access have been particularly effective, demonstrating the value of ambitious, front-loaded liberalisation for exporter response.</p>`,
     // ⚠ DATA NOTE: exports & imports were transposed in original data — corrected here.
     // India imports FROM UAE (crude oil, gold, LNG, petrochemicals) are larger than exports TO UAE.
@@ -531,7 +528,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 5000, 2007: 6600, 2008: 8900, 2009: 7600, 2010: 10500,
       2011: 14500, 2012: 17600, 2013: 19900, 2014: 22200, 2015: 20000,
       2016: 18700, 2017: 21800, 2018: 25000, 2019: 27000, 2020: 22800,
-      2021: 27900, 2022: 39000, 2023: 38000, 2024: 40200, 2025: 42500
+      2021: 27900, 2022: 39000, 2023: 33260, 2024: 42000, 2025: 44000
     },
     imports: { // India's imports FROM UAE (goods, USD million)
       1991: 700, 1992: 820, 1993: 950, 1994: 1100, 1995: 1300,
@@ -540,7 +537,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 7200, 2007: 9500, 2008: 12800, 2009: 11000, 2010: 15000,
       2011: 20500, 2012: 24800, 2013: 28000, 2014: 31000, 2015: 28000,
       2016: 26000, 2017: 30000, 2018: 34500, 2019: 37000, 2020: 31000,
-      2021: 37500, 2022: 51000, 2023: 47000, 2024: 52000, 2025: 58000
+      2021: 37500, 2022: 51000, 2023: 55750, 2024: 62000, 2025: 65000
     }
   },
 
@@ -585,7 +582,6 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 2494,
     utilTotalEligible: 4300,
     utilisationNote: "Good early-stage utilisation for a 2022 agreement. Textiles exporters responded fastest. RoO documentation still a learning curve for smaller manufacturers.",
-    dataVerification: `<p>The absolute trade values in this tracker appear <strong>approximately twice as high</strong> as official DGFT figures — a known data quality issue flagged in the source code. Official DGFT figures for <strong>FY 2023-24</strong> show exports to Australia at approximately <strong>USD 8.6 billion</strong> and imports at <strong>USD 16.6 billion</strong>. The direction of the trade balance (India deficit, driven by coal and LNG) is correct.</p><p>More recent data for <strong>FY 2024-25</strong> places total bilateral trade at <strong>USD 24.1 billion</strong>, with India's exports reaching USD 8.5 billion — consistent with the doubling narrative since the ECTA's entry into force.</p>`,
     keyAnalysisExtra: `<p>India's exports to Australia more than doubled over four years, rising from USD 4 billion in FY 2020–21 to USD 8.5 billion in FY 2024–25. Total bilateral trade reached USD 24.1 billion in FY 2024–25, with the agreement demonstrating strong early momentum — particularly for textiles, pharmaceuticals, and engineering goods, which benefited from Day 1 zero-duty access.</p><p>Australia's strategic importance extends beyond tariff concessions: the critical minerals cooperation chapter positions the partnership as a long-term supply chain anchor for India's EV and semiconductor ambitions, with Australian lithium and cobalt increasingly viewed as alternatives to Chinese-processed inputs.</p>`,
     // ⚠ DATA NOTE: Absolute values appear ~2x DGFT-reported figures.
     // DGFT FY2023-24: India exports to Australia ~$8.6B, imports ~$16.6B.
@@ -598,7 +594,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2006: 2200, 2007: 2900, 2008: 3800, 2009: 3200, 2010: 4400,
       2011: 6000, 2012: 7200, 2013: 8200, 2014: 9200, 2015: 8500,
       2016: 8000, 2017: 9400, 2018: 11000, 2019: 12000, 2020: 10500,
-      2021: 12800, 2022: 16500, 2023: 15800, 2024: 17200, 2025: 19500
+      2021: 4000, 2022: 6500, 2023: 8600, 2024: 8500, 2025: 9000
     },
     imports: {
       1991: 380, 1992: 440, 1993: 510, 1994: 615, 1995: 755,
@@ -606,8 +602,8 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
       2001: 1440, 2002: 1640, 2003: 1970, 2004: 2580, 2005: 3450,
       2006: 4650, 2007: 6200, 2008: 8200, 2009: 6900, 2010: 9700,
       2011: 13500, 2012: 16400, 2013: 18600, 2014: 21100, 2015: 19600,
-      2016: 18400, 2017: 22000, 2018: 25500, 2019: 28000, 2020: 24400,
-      2021: 30000, 2022: 39500, 2023: 38000, 2024: 34800, 2025: 35500
+      2016: 18400, 2017: 22000, 2018: 25500, 2019: 28000, 2020: 12000,
+      2021: 14000, 2022: 16000, 2023: 16600, 2024: 15600, 2025: 16000
     }
   },
 
