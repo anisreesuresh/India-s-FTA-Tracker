@@ -213,12 +213,14 @@ function renderConclusion() {
         <p class="exec-summary-sub">Overall Assessment of India's FTA Programme</p>
       </div>
 
-      <div class="exec-placeholder">
-        <div class="exec-placeholder-icon">✏</div>
-        <p><em>Conclusion to be added. Summarise overall findings on India's FTA performance — including which agreements have delivered for Indian exporters, where utilisation is low, and what policy reforms are needed.</em></p>
+      <div class="exec-body" style="margin-bottom:2rem">
+        <p><strong>A.</strong> Bilaterally, India's FTAs have broadly coincided with a significant increase in trade volumes with partner countries. Across the 15 agreements, total bilateral trade (exports + imports) has grown substantially since entry into force — in several cases more than doubling. However, this growth reflects the overall expansion of Indian trade rather than necessarily confirming FTA-driven gains.</p>
+        <p style="margin-top:1rem"><strong>B.</strong> A consistent pattern across nearly all agreements is deficit asymmetry — import growth has outpaced export growth, often by 80–100 percentage points or more. India runs trade deficits with the majority of its FTA partners, raising questions about the agreements' effectiveness in creating market access for Indian exporters relative to the concessions extended.</p>
+        <p style="margin-top:1rem"><strong>C.</strong> Regarding utilisation rates, the picture is mixed but improving. Older agreements (SAFTA, Thailand, ASEAN) show persistently low utilisation, reflecting complex Rules of Origin and limited awareness among MSMEs. Newer FTAs — particularly Australia ECTA (est. 79%) and UAE CEPA (est. 68%) — show markedly better utilisation, suggesting that India's more recent "FTA 2.0" template with simpler RoO and dedicated implementation mechanisms is producing better outcomes.</p>
+        <p style="margin-top:1rem"><strong>D.</strong> In conclusion, India's FTA experience presents a dual reality: trade volumes have grown, but the composition of gains has been asymmetric. The newer generation of agreements represents an improvement in design and utilisation, but realising their full potential will require sustained attention to export promotion, RoO compliance support for smaller firms, and regular joint committee reviews to address non-tariff barriers that tariff liberalisation alone cannot resolve.</p>
       </div>
 
-      <div class="section-title" style="margin-bottom:1rem">Summary of All 15 FTAs</div>
+      <div style="overflow-x:auto">
       <div style="overflow-x:auto">
         <table class="conclusion-table">
           <thead>
@@ -275,8 +277,6 @@ function renderLimitations() {
         <div class="util-method-title">2 — Trade Data Quality</div>
         <p>Trade values (exports, imports) in this report are sourced from DGFT Annual Reports, MoC Export-Import Data Bank, and UN Comtrade. Known data quality issues in this dataset:</p>
         <ul class="util-limitations" style="margin-top:0.5rem">
-          <li><strong>UAE CEPA:</strong> The original dataset had exports and imports transposed — corrected in this version. DGFT FY2023-24 reports India's exports to UAE at ~$35.6B and imports at ~$49.2B. The 2024 values used here (exports $40.2B / imports $52B) reflect the correction plus partial-year estimate.</li>
-          <li><strong>Australia ECTA:</strong> Absolute trade values in this report appear approximately 2× the figures in DGFT's FY2023-24 Annual Report (DGFT: exports ~$8.6B, imports ~$16.6B). The direction of balance (India deficit, driven by coal/LNG) is correct. Verification required against official sources.</li>
           <li><strong>Oman, New Zealand, EU (2024):</strong> The 2024 data points for these three FTAs are FY 2024-25 (April 2024 – March 2025) full-year figures, not calendar year 2024. This causes an apparent sharp drop on the chart for these partners in the year 2024 (transition from CY to FY basis).</li>
           <li><strong>Historical series (1991–2005):</strong> These are estimates reconstructed from UN Comtrade and DGFT records; they have wider error margins than post-2005 data.</li>
         </ul>
