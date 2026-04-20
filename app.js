@@ -20,7 +20,7 @@ function buildTimeline() {
     <div class="fta-dot"></div>
     <div class="fta-btn-info">
       <div class="fta-name" style="font-size:0.92rem">Executive Summary</div>
-      <div class="fta-partner">Overview &amp; Key Statistics</div>
+      <div class="fta-partner">Overview &amp; Methodology</div>
     </div>
   `;
   execBtn.addEventListener('click', () => selectFTA('executive-summary'));
@@ -142,12 +142,14 @@ function renderExecutiveSummary() {
         <p>This report uses two primary metrics for assessing these pacts — the improvement of bilateral trade volumes and the utilisation rate of preferential tariff lines — which together reveal a complex landscape of surging trade magnitudes alongside persistent structural asymmetries.</p>
       </div>
 
-      <div class="section-title" style="margin-bottom:1rem">Key Statistics</div>
-      <div class="exec-stats-grid">
-        <div class="exec-stat"><div class="exec-stat-val">15</div><div class="exec-stat-label">Signed FTAs</div></div>
-        <div class="exec-stat"><div class="exec-stat-val">55</div><div class="exec-stat-label">Partner Countries</div></div>
-        <div class="exec-stat"><div class="exec-stat-val">30yr</div><div class="exec-stat-label">Timeline (1996–2026)</div></div>
-        <div class="exec-stat"><div class="exec-stat-val">9</div><div class="exec-stat-label">In Force</div></div>
+      <div class="section-title" style="margin-bottom:1rem">Key Findings</div>
+      <div class="key-findings-card" style="margin-bottom:2rem">
+        <ul class="findings-list">
+          <li><strong>Utilisation Disparity (Historical vs. Modern):</strong> India's average FTA utilisation has historically stagnated at approximately 25%, lagging behind the EU (70–80%). However, "FTA 2.0" agreements show a breakthrough: the UAE CEPA reports utilisation over 60% for eligible lines, while the Australia ECTA has reached approximately 80% for labour-intensive exports like textiles and jewellery.</li>
+          <li><strong>Structural Deficit Asymmetry:</strong> While trade volumes with partners have grown by nearly 50% on average within four years of signing, the gains are skewed toward imports. The deficit with ASEAN surged from USD 7.5 billion in 2011 to nearly USD 44 billion in 2023, primarily due to high-value imports (electronics, palm oil) outpacing India's lower-value export basket.</li>
+          <li><strong>Administrative &amp; RoO Constraints:</strong> Utilisation is severely hampered by the "Asian Noodle Bowl" effect — overlapping agreements with complex and differing Rules of Origin (RoO). For many MSMEs, the administrative cost of proving origin exceeds the 2–5% tariff benefit, particularly in older agreements with Japan and South Korea where non-tariff standards act as the primary barrier.</li>
+          <li>While the above constraints characterise older-generation agreements, new-generation FTAs (UAE CEPA, Australia ECTA, UK CETA) may bring a materially different effect in terms of FTA utilisation — with Day 1 zero-duty offers, digital trade chapters, and simplified RoO suggesting a structural break from historical patterns.</li>
+        </ul>
       </div>
 
       <div class="util-methodology" style="margin-bottom:2rem">
@@ -506,10 +508,7 @@ function renderFTADetail(fta) {
       <div class="summary-grid">
         <div class="summary-card full">
           <div class="sc-label">Agreement Summary</div>
-          <ul class="sc-bullets">${splitToBullets(fta.summary, 'sentence')}</ul>
-
-          <div class="sc-sub-label">Key Market Access Provisions</div>
-          <ul class="sc-bullets">${keyProvisionsHtml}</ul>
+          <ul class="sc-bullets">${splitToBullets(fta.summary, 'sentence')}${keyProvisionsHtml}</ul>
 
           <div class="sc-sub-label">Tariff Coverage &amp; Market Access</div>
           <div class="sc-value"><strong>${fta.coverageNote}</strong>
@@ -539,14 +538,6 @@ function renderFTADetail(fta) {
             &amp; <a href="https://comtradeplus.un.org/" target="_blank" rel="noopener">UN Comtrade</a> · USD Million · annual figures
           </div>
         </div>
-      </div>
-
-      <!-- TOP GOODS — full-width table only -->
-      <div class="section-title" style="margin-bottom:1rem">Top 5 Export Goods to ${fta.partner} · Tariff &amp; Value Analysis</div>
-      <div class="chart-card" style="margin-bottom:2rem">
-        <div class="chart-title">Tariff Rate Changes &amp; Export Values · 2024 est.</div>
-        <div class="chart-subtitle">Pre-FTA vs post-FTA tariff applied by ${fta.partner} on Indian exports</div>
-        ${goodsTableHtml}
       </div>
 
       <!-- UTILISATION -->
