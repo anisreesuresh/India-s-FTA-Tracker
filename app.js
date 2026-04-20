@@ -136,10 +136,10 @@ function renderExecutiveSummary() {
         <p class="exec-summary-sub">India's Free Trade Agreements — Empirical Assessment · 1996–2026</p>
       </div>
 
-      <div class="exec-placeholder">
-        <div class="exec-placeholder-icon">✏</div>
-        <p><em>Executive summary to be added. Use this space to present the key findings, policy implications, and overall assessment of India's FTA programme.</em></p>
-        <p class="exec-placeholder-note">Select individual FTAs from the index on the left to explore detailed analysis.</p>
+      <div class="exec-body">
+        <p>The evolution of India's foreign trade policy has transitioned from a historical stance of protectionist caution toward an era of strategic economic engagement, characterized by the proliferation of Free Trade Agreements (FTAs). As of 2025, India maintains 13 active free trade agreements, with a newer generation of "FTA 2.0" pacts with developed economies like Australia and the UAE signaling a pivot toward higher-value trade corridors.</p>
+        <p>India's integration into the global trade system has seen its total trade volume grow by over 3,000% in the 32 years since 1991, rising from USD 22.94 billion to USD 759.93 billion by 2023. A central tension in India's trade narrative is the persistent merchandise trade deficit, which averaged between USD 240 billion and USD 267 billion in recent years. While India achieved a robust services trade surplus of USD 162 billion in FY 2023-24, the merchandise gap remains a structural concern.</p>
+        <p>This report uses two primary metrics for assessing these pacts — the improvement of bilateral trade volumes and the utilisation rate of preferential tariff lines — which together reveal a complex landscape of surging trade magnitudes alongside persistent structural asymmetries.</p>
       </div>
 
       <div class="section-title" style="margin-bottom:1rem">Key Statistics</div>
