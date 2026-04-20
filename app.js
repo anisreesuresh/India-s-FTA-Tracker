@@ -555,6 +555,14 @@ function renderFTADetail(fta) {
       <!-- KEY ANALYSIS -->
       ${keyAnalysisHtml}
 
+      <!-- DATA VERIFICATION -->
+      ${fta.dataVerification ? `
+      <div class="data-verification">
+        <div class="dv-title">⚠ Data Verification Note</div>
+        ${fta.dataVerification}
+      </div>
+      ` : ''}
+
       <!-- DATA NOTE -->
       <div class="data-note">
         📊 <strong>Data Sources:</strong> Ministry of Commerce &amp; Industry (DGFT), UN Comtrade, WTO RTA Database, partner government trade fact sheets, Reserve Bank of India, UNCTAD Trade Analysis Portal.
