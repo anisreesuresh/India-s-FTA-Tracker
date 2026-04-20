@@ -277,6 +277,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 12250,
     utilTotalEligible: 49000,
     utilisationNote: "Critically low utilisation by Indian exporters — India mainly a net importer under this FTA. ASEAN exporters (esp. Thailand, Vietnam, Malaysia) extensively use zero-duty access. Low usage by Indian SMEs due to RoO complexity and documentation burden.",
+    keyAnalysisExtra: `<p>Since its inception, bilateral trade has expanded from approximately USD 53 billion in 2010 to USD 131.57 billion in 2022–23. While exports to ASEAN grew by approximately 130% between 2010 and 2023, imports surged by 234%. Consequently, the trade deficit more than doubled, reaching nearly USD 44 billion.</p><p>This surge in imports is driven largely by essential commodities and intermediate goods. Palm oil, coal, and electronics from Indonesia, Malaysia, and Vietnam have capitalised on India's massive consumer base, while Indian exports like petroleum products and engineering goods face stringent non-tariff barriers in ASEAN markets.</p>`,
     exports: {
       1991: 1200, 1992: 1400, 1993: 1600, 1994: 1900, 1995: 2300,
       1996: 2700, 1997: 3100, 1998: 2800, 1999: 3100, 2000: 3600,
@@ -338,6 +339,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 4788,
     utilTotalEligible: 12600,
     utilisationNote: "Below-average utilisation from India's side; Korea's exporters (auto, electronics, steel) utilise heavily. Indian exporters struggle with RoO documentation.",
+    keyAnalysisExtra: `<p>Like the ASEAN experience, trade volume has increased significantly, rising from USD 12 billion in 2009–10 to over USD 27 billion by 2023–24. The structural asymmetry, however, has deepened:</p><table><thead><tr><th>Category</th><th>Pre-CEPA Avg (2007–09)</th><th>Post-CEPA Avg (2022–24)</th><th>Growth (%)</th></tr></thead><tbody><tr><td>India's Exports to South Korea</td><td>USD 3.4 Billion</td><td>USD 7.1 Billion</td><td>108.8%</td></tr><tr><td>India's Imports from South Korea</td><td>USD 7.3 Billion</td><td>USD 19.9 Billion</td><td>172.6%</td></tr><tr><td>Trade Deficit</td><td>USD 4.0 Billion</td><td>USD 12.8 Billion</td><td>220.0%</td></tr></tbody></table><p>The deficit has grown by 164–220% depending on the comparative period selected, primarily because South Korea exports high-value products such as integrated circuits, electronics, and automobiles, while Indian exports remain concentrated in lower-value items like aluminium, iron and steel, and refined petroleum. Integrated circuits alone accounted for nearly USD 3 billion of Korea's exports to India in 2024.</p>`,
     exports: {
       1991: 120, 1992: 140, 1993: 165, 1994: 200, 1995: 250,
       1996: 310, 1997: 350, 1998: 290, 1999: 330, 2000: 400,
@@ -399,6 +401,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 1922,
     utilTotalEligible: 6200,
     utilisationNote: "Low utilisation from India's side despite high FTA coverage. Japanese exporters use heavily. Key challenge: complex product-specific RoO and certification costs. India's Marine Products Export Development Authority (MPEDA) actively promotes FTA use for seafood.",
+    keyAnalysisExtra: `<p>While bilateral trade grew at a compound annual growth rate (CAGR) of 7.75% between 2019 and 2024, the volume remains relatively modest at USD 22.85 billion in FY 2023–24. India's primary challenge with Japan is the persistent trade deficit, which stood at USD 12.54 billion in 2024 — a structural imbalance driven by Japan's dominance in high-value capital goods, electronics, and specialty chemicals.</p><p>The relationship, however, is heavily defined by investment: Japan is India's fifth-largest source of FDI, with cumulative investments of USD 43.2 billion since 2000. Japanese manufacturers — particularly in automobiles (Suzuki, Honda, Toyota), electronics (Sony, Panasonic), and infrastructure — have made India a key manufacturing hub. This investment dimension arguably delivers more long-term economic value than the trade balance alone suggests.</p>`,
     exports: {
       1991: 450, 1992: 510, 1993: 580, 1994: 670, 1995: 790,
       1996: 920, 1997: 1050, 1998: 900, 1999: 980, 2000: 1150,
@@ -514,6 +517,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 27360,
     utilTotalEligible: 36000,
     utilisationNote: "High utilisation in just 2 years. Gems/jewellery sector responding strongly to gold TRQ. Textiles and pharma export councils actively promoting FTA. UAE is India's largest bilateral FTA partner in trade value.",
+    keyAnalysisExtra: `<p>The UAE CEPA has delivered measurable results faster than any previous Indian trade agreement. Bilateral merchandise trade nearly doubled from USD 43.3 billion in FY 2020–21 to USD 83.7 billion in FY 2023–24. Total trade crossed the USD 100 billion mark in FY 2024–25, marking a 19.6% year-on-year increase — making UAE the first bilateral partner with whom India has crossed this threshold.</p><p>Non-oil exports have grown at an average of 25.6% since the agreement's entry into force, with significant gains in gems and jewellery and electronics. The gold jewellery TRQ and Day 1 zero-duty access have been particularly effective, demonstrating the value of ambitious, front-loaded liberalisation for exporter response.</p>`,
     // ⚠ DATA NOTE: exports & imports were transposed in original data — corrected here.
     // India imports FROM UAE (crude oil, gold, LNG, petrochemicals) are larger than exports TO UAE.
     // Cross-check: DGFT FY2023-24 India exports to UAE ~$35.6B; imports from UAE ~$49.2B.
@@ -578,6 +582,7 @@ utilisationNote: "Only ~8% of India's eligible exports to Sri Lanka use ISFTA pr
     utilImportsFTA: 2494,
     utilTotalEligible: 4300,
     utilisationNote: "Good early-stage utilisation for a 2022 agreement. Textiles exporters responded fastest. RoO documentation still a learning curve for smaller manufacturers.",
+    keyAnalysisExtra: `<p>India's exports to Australia more than doubled over four years, rising from USD 4 billion in FY 2020–21 to USD 8.5 billion in FY 2024–25. Total bilateral trade reached USD 24.1 billion in FY 2024–25, with the agreement demonstrating strong early momentum — particularly for textiles, pharmaceuticals, and engineering goods, which benefited from Day 1 zero-duty access.</p><p>Australia's strategic importance extends beyond tariff concessions: the critical minerals cooperation chapter positions the partnership as a long-term supply chain anchor for India's EV and semiconductor ambitions, with Australian lithium and cobalt increasingly viewed as alternatives to Chinese-processed inputs.</p>`,
     // ⚠ DATA NOTE: Absolute values appear ~2x DGFT-reported figures.
     // DGFT FY2023-24: India exports to Australia ~$8.6B, imports ~$16.6B.
     // Balance direction (deficit, mainly coal/LNG) is correct.

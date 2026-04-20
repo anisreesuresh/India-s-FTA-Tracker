@@ -466,6 +466,9 @@ function renderFTADetail(fta) {
 
   // Auto-generated key analysis
   const findings = generateKeyFindings(fta);
+  const extraNoteHtml = fta.keyAnalysisExtra ? `
+    <div class="key-analysis-extra">${fta.keyAnalysisExtra}</div>
+  ` : '';
   const keyAnalysisHtml = `
     <div class="key-findings-section">
       <div class="section-title" style="margin-bottom:1rem">Key Analysis</div>
@@ -473,6 +476,7 @@ function renderFTADetail(fta) {
         <ul class="findings-list">
           ${findings.map(f => `<li>${f}</li>`).join('')}
         </ul>
+        ${extraNoteHtml}
       </div>
     </div>
   `;
